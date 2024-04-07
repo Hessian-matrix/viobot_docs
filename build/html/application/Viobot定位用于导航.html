@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ch" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viobot定位用于导航 &mdash; viobot_doc 0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d97f9d14"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="应用例子" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            viobot_doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E7%AE%80%E4%BB%8B.html">Viobot简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html">硬件组成和接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%8B%E7%BB%8D.html">基本功能使用及介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">硬件控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">算法控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E6%95%B0%E6%8D%AE%E5%8C%85%E5%BD%95%E5%88%B6.html">Viobot数据包录制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8/index.html">硬件接口使用</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">应用例子</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Viobot定位用于导航</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.viobot输出信息处理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1）接收消息，注册回调函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2）回调函数处理位姿信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3）回调函数处理点云信息</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pointcloudlaserscan">2.pointcloud转laserscan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#move-base">3.move_base配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#launch">1）launch文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2）地图文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">3）move_base配置文件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">viobot_doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">应用例子</a></li>
+      <li class="breadcrumb-item active">Viobot定位用于导航</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/application/Viobot定位用于导航.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viobot">
+<h1>Viobot定位用于导航<a class="headerlink" href="#viobot" title="Link to this heading"></a></h1>
+<p>注：此教程以轮式机器人作为一个样例，具体的应用还需要用户自己去做更深入的开发。</p>
+<p><img alt="../_images/image_hjTxh-UknT.png" src="../_images/image_hjTxh-UknT.png" /></p>
+<p>路径规划部分我们选用轮式机器人比较常用的move_base。</p>
+<p>整个架构就是Viobot使用stereo2算法提供机器人的当前位姿，输入到move_base作为规划起点，再给定目标终点，move_base会输出一个/cmd_vel的话题使机器人运动起来。至于/cmd_vel到控制机器人底盘运动（也就是base controller这部分）的实现就要用户自己去实现了，我们先默认都已经可以实现base controller了。</p>
+<p><img alt="../_images/image_YS4imUf4SN.png" src="../_images/image_YS4imUf4SN.png" /></p>
+<p>下面是我整理的一张整体的框架图</p>
+<p><img alt="../_images/image_1aEzH8bD0X.png" src="../_images/image_1aEzH8bD0X.png" /></p>
+<p>接下来就是例程的粗略讲解</p>
+<section id="id1">
+<h2>1.viobot输出信息处理<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>接收stereo2的位姿和点云，使用TF转换，构建TF树。</p>
+<section id="id2">
+<h3>1）接收消息，注册回调函数<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">point_clound_topic</span><span class="p">;</span>
+<span class="c1">//点云话题配置接口，可以通过launch文件配置点云输入，默认为TOF</span>
+<span class="n">nh_private</span><span class="p">.</span><span class="n">param</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;point_clound_topic&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">point_clound_topic</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/pr_loop/tof_points&quot;</span><span class="p">);</span>
+
+<span class="n">sub_odom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/pr_loop/odometry_rect&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">VioOdomNodelet</span><span class="o">::</span><span class="n">loop_pose_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="n">sub_car_odom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/odom&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">VioOdomNodelet</span><span class="o">::</span><span class="n">car_odom_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="n">sub_pointcloud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">point_clound_topic</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">VioOdomNodelet</span><span class="o">::</span><span class="n">loop_pointclound_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>2）回调函数处理位姿信息<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>自己去维护了一个从<code class="docutils literal notranslate"><span class="pre">base_link</span></code>到<code class="docutils literal notranslate"><span class="pre">vio_odom</span></code>的动态TF变换</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">VioOdomNodelet::loop_pose_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">nav_msgs</span><span class="o">::</span><span class="n">OdometryPtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msg</span><span class="p">){</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">tf</span><span class="o">::</span><span class="n">TransformBroadcaster</span><span class="w"> </span><span class="n">odom_broadcaster</span><span class="p">;</span><span class="c1">//定义tf 对象</span>
+<span class="w">    </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">TransformStamped</span><span class="w"> </span><span class="n">odom_trans</span><span class="p">;</span><span class="c1">//定义tf发布时需要的类型消息</span>
+<span class="w">    </span><span class="n">nav_msgs</span><span class="o">::</span><span class="n">Odometry</span><span class="w"> </span><span class="n">odom</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;vio_odom&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">child_frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;base_link&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="w"> </span><span class="n">position_in_vio</span><span class="p">(</span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">tf</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">original_quat</span><span class="p">(</span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">//选转到跟base_link方向一致</span>
+<span class="w">    </span><span class="n">tf</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">quat_rotate</span><span class="p">;</span>
+<span class="w">    </span><span class="n">quat_rotate</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">M_PI</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">M_PI</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// quat_rotate.setRPY(0,M_PI/2, -M_PI/2);</span>
+
+<span class="w">    </span><span class="c1">// Apply the rotations</span>
+<span class="w">    </span><span class="n">tf</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">final_quat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">original_quat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">quat_rotate</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Convert the final quaternion back to a geometry_msgs Quaternion</span>
+<span class="w">    </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">geo_q</span><span class="p">;</span>
+<span class="w">    </span><span class="n">tf</span><span class="o">::</span><span class="n">quaternionTFToMsg</span><span class="p">(</span><span class="n">final_quat</span><span class="p">,</span><span class="w"> </span><span class="n">geo_q</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">height_charge</span><span class="p">){</span><span class="c1">//一个将Z轴归零的策略，可根据自己的实际情况配置</span>
+<span class="w">        </span><span class="n">frame_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+<span class="w">        </span><span class="n">position_in_vio</span><span class="p">.</span><span class="n">z</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="c1">//z轴归零</span>
+<span class="w">        </span><span class="c1">//这里为了把位姿朝向规整到水平面</span>
+<span class="w">        </span><span class="n">vio_quat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geo_q</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// printf(&quot;--------------------\npose:\nx:%lf\ny:%lf\nz:%lf\nquat:\nx:%lf\ny:%lf\nz:%lf\nw:%lf\n&quot;,msg-&gt;pose.pose.position.x,msg-&gt;pose.pose.position.y,</span>
+<span class="w">        </span><span class="c1">//                                                             msg-&gt;pose.pose.position.z,msg-&gt;pose.pose.orientation.x,msg-&gt;pose.pose.orientation.y,</span>
+<span class="w">        </span><span class="c1">//                                                             msg-&gt;pose.pose.orientation.z,msg-&gt;pose.pose.orientation.w);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">yaw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">::</span><span class="n">getYaw</span><span class="p">(</span><span class="n">vio_quat</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// geometry_msgs::Quaternion geo_q1 = tf::createQuaternionMsgFromYaw(yaw + M_PI / 2);</span>
+<span class="w">        </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">geo_q1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">::</span><span class="n">createQuaternionMsgFromYaw</span><span class="p">(</span><span class="n">yaw</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geo_q1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+<span class="w">        </span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geo_q</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+
+<span class="w">    </span><span class="n">position_in_vio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position_in_vio</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t_vio_base_link</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Coordinate transformation from VIO to base_link</span>
+<span class="w">    </span><span class="c1">// odom.pose.pose.position.x = position_in_vio.x();</span>
+<span class="w">    </span><span class="c1">// odom.pose.pose.position.y = position_in_vio.y();</span>
+<span class="w">    </span><span class="c1">// odom.pose.pose.position.z = position_in_vio.z();</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//这里odom的速度可选stereo2输出的速度，也可以选择底盘论速计的速度</span>
+<span class="w">    </span><span class="c1">// odom.twist.twist.linear.x = msg-&gt;twist.twist.linear.x;</span>
+<span class="w">    </span><span class="c1">// odom.twist.twist.linear.y = msg-&gt;twist.twist.linear.y;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">linear</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linear_vx</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">linear</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linear_vy</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">linear</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">angular</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">angular</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">angular</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">angular_vz</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// odom.twist.twist.angular.z = msg-&gt;twist.twist.angular.z;</span>
+
+<span class="w">    </span><span class="n">odom_trans</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom_trans</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;vio_odom&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom_trans</span><span class="p">.</span><span class="n">child_frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;base_link&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">odom_trans</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position_in_vio</span><span class="p">.</span><span class="n">x</span><span class="p">();</span><span class="c1">//x坐标</span>
+<span class="w">    </span><span class="n">odom_trans</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position_in_vio</span><span class="p">.</span><span class="n">y</span><span class="p">();</span><span class="c1">//y坐标</span>
+<span class="w">    </span><span class="n">odom_trans</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position_in_vio</span><span class="p">.</span><span class="n">z</span><span class="p">();</span><span class="c1">//z坐标        </span>
+<span class="w">    </span><span class="n">odom_trans</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">;</span><span class="c1">//偏航角</span>
+<span class="w">    </span><span class="n">odom_broadcaster</span><span class="p">.</span><span class="n">sendTransform</span><span class="p">(</span><span class="n">odom_trans</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//区分静止和运动时的协方差</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">linear</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">linear</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">twist</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">angular</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">covariance</span><span class="p">,</span><span class="w"> </span><span class="n">odom_pose_covariance2</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">odom_pose_covariance2</span><span class="p">));</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">covariance</span><span class="p">,</span><span class="w"> </span><span class="n">odom_twist_covariance2</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">odom_twist_covariance2</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">odom</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">covariance</span><span class="p">,</span><span class="w"> </span><span class="n">odom_pose_covariance</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">odom_pose_covariance</span><span class="p">));</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">odom</span><span class="p">.</span><span class="n">twist</span><span class="p">.</span><span class="n">covariance</span><span class="p">,</span><span class="w"> </span><span class="n">odom_twist_covariance</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">odom_twist_covariance</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">pub_odom</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">odom</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>3）回调函数处理点云信息<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>把点云划到vio_odom上面，它会根据上面的<code class="docutils literal notranslate"><span class="pre">base_link</span></code>到<code class="docutils literal notranslate"><span class="pre">vio_odom</span></code>的动态TF变换变换</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">VioOdomNodelet::loop_pointclound_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">PointCloud2ConstPtr</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cloud_msg_in</span><span class="p">){</span>
+<span class="w">    </span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">PointCloud2</span><span class="w"> </span><span class="n">cloud_msg_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">cloud_msg_in</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Set the frame_id of the output pointcloud to base_link</span>
+<span class="w">    </span><span class="n">cloud_msg_out</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;vio_odom&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">height_charge</span><span class="p">){</span>
+<span class="w">        </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Quaterniond</span><span class="w"> </span><span class="n">q</span><span class="p">(</span><span class="n">vio_quat</span><span class="p">.</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">vio_quat</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">vio_quat</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">vio_quat</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix3d</span><span class="w"> </span><span class="n">rotation_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">normalized</span><span class="p">().</span><span class="n">toRotationMatrix</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">//将Eigen::Matrix3d 手动转换为 tf::Matrix3x3</span>
+<span class="w">        </span><span class="n">tf</span><span class="o">::</span><span class="n">Matrix3x3</span><span class="w"> </span><span class="n">tf_rotation_matrix</span><span class="p">(</span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+<span class="w">                                        </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+<span class="w">                                        </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">rotation_matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">yaw</span><span class="p">,</span><span class="w"> </span><span class="n">pitch</span><span class="p">,</span><span class="w"> </span><span class="n">roll</span><span class="p">;</span>
+<span class="w">        </span><span class="n">tf_rotation_matrix</span><span class="p">.</span><span class="n">getRPY</span><span class="p">(</span><span class="n">roll</span><span class="p">,</span><span class="w"> </span><span class="n">pitch</span><span class="p">,</span><span class="w"> </span><span class="n">yaw</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//创建pitch和roll的逆旋转</span>
+<span class="w">        </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix3d</span><span class="w"> </span><span class="n">pitch_matrix_inv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">AngleAxisd</span><span class="p">(</span><span class="o">-</span><span class="n">pitch</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="o">::</span><span class="n">UnitY</span><span class="p">()).</span><span class="n">toRotationMatrix</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix3d</span><span class="w"> </span><span class="n">roll_matrix_inv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">AngleAxisd</span><span class="p">(</span><span class="o">-</span><span class="n">roll</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="o">::</span><span class="n">UnitX</span><span class="p">()).</span><span class="n">toRotationMatrix</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix3d</span><span class="w"> </span><span class="n">final_rotation_matrix</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// 应用逆旋转到原始四元数上</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">inv</span><span class="p">){</span>
+<span class="w">            </span><span class="n">final_rotation_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pitch_matrix_inv</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">roll_matrix_inv</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="p">{</span>
+<span class="w">            </span><span class="n">final_rotation_matrix</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">PointCloud</span><span class="w"> </span><span class="n">pointcl1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">convertPointCloud2ToPointCloud</span><span class="p">(</span><span class="n">cloud_msg_out</span><span class="p">,</span><span class="n">pointcl1</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pointcl1</span><span class="p">.</span><span class="n">points</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="w"> </span><span class="n">point_eigen</span><span class="p">(</span><span class="n">pointcl1</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">pointcl1</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pointcl1</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">z</span><span class="p">);</span>
+<span class="w">            </span><span class="n">point_eigen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">final_rotation_matrix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">point_eigen</span><span class="p">;</span>
+<span class="w">            </span><span class="n">pointcl1</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">point_eigen</span><span class="p">.</span><span class="n">x</span><span class="p">();</span>
+<span class="w">            </span><span class="n">pointcl1</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">point_eigen</span><span class="p">.</span><span class="n">y</span><span class="p">();</span>
+<span class="w">            </span><span class="n">pointcl1</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">point_eigen</span><span class="p">.</span><span class="n">z</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">frame_z</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// printf(&quot;frame_z = %lf\n&quot;,frame_z);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">convertPointCloudToPointCloud2</span><span class="p">(</span><span class="n">pointcl1</span><span class="p">,</span><span class="n">cloud_msg_out</span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">pub_pointcloud</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">cloud_msg_out</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pointcloudlaserscan">
+<h2>2.pointcloud转laserscan<a class="headerlink" href="#pointcloudlaserscan" title="Link to this heading"></a></h2>
+<p>其实就是根据原有的开源代码做了一下修改，原有的代码配置了use_inf为false时，当点云的距离大于range_max就不显示了，这样会造成一些刷新上面的困难，所以再输出/scan话题之前加了1.5m的距离，让/scan话题初始就是一个range_max+1.5的扇形，根据障碍物来刷新。</p>
+</section>
+<section id="move-base">
+<h2>3.move_base配置<a class="headerlink" href="#move-base" title="Link to this heading"></a></h2>
+<section id="launch">
+<h3>1）launch文件<a class="headerlink" href="#launch" title="Link to this heading"></a></h3>
+<p>主要是启动map_server加载地图文件和启动move_base并加载了配置文件。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Run the map server --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;map_server&quot;</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;map_server&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;map_server&quot;</span><span class="w"> </span><span class="na">args=</span><span class="s">&quot;$(find nav_robot)/maps/map_office.yaml&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- &lt;node name=&quot;map_server&quot; pkg=&quot;map_server&quot; type=&quot;map_server&quot; args=&quot;$(find nav_robot)/maps/blank_map.yaml&quot;/&gt; --&gt;</span>
+
+
+<span class="w">    </span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;move_base&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;move_base&quot;</span><span class="w"> </span><span class="na">respawn=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;move_base&quot;</span><span class="w"> </span><span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;rosparam</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;$(find nav_robot)/config/mark_1/costmap_common_params.yaml&quot;</span><span class="w"> </span><span class="na">command=</span><span class="s">&quot;load&quot;</span><span class="w"> </span><span class="na">ns=</span><span class="s">&quot;global_costmap&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;rosparam</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;$(find nav_robot)/config/mark_1/costmap_common_params.yaml&quot;</span><span class="w"> </span><span class="na">command=</span><span class="s">&quot;load&quot;</span><span class="w"> </span><span class="na">ns=</span><span class="s">&quot;local_costmap&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;rosparam</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;$(find nav_robot)/config/mark_1/local_costmap_params.yaml&quot;</span><span class="w"> </span><span class="na">command=</span><span class="s">&quot;load&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;rosparam</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;$(find nav_robot)/config/mark_1/global_costmap_params.yaml&quot;</span><span class="w"> </span><span class="na">command=</span><span class="s">&quot;load&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;rosparam</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;$(find nav_robot)/config/mark_1/move_base_teb_params.yaml&quot;</span><span class="w"> </span><span class="na">command=</span><span class="s">&quot;load&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;rosparam</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;$(find nav_robot)/config/mark_1/teb_local_planner_params.yaml&quot;</span><span class="w"> </span><span class="na">command=</span><span class="s">&quot;load&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/node&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- &lt;node name=&quot;rviz&quot; pkg=&quot;rviz&quot; type=&quot;rviz&quot; args=&quot;-d $(find nav_robot)/rviz_cfg/nav_test.rviz&quot; /&gt; --&gt;</span>
+
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>2）地图文件<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>这个需要用户把自己的场景先建里一个地图先验，可以是使用雷达等设备，也可以使用viobot（这个建图要单独开一篇来讲）。</p>
+</section>
+<section id="id6">
+<h3>3）move_base配置文件<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<p>每个文件的参数都有详细注释，用户可以自行查看参数的意义和选择配置。</p>
+<p><code class="docutils literal notranslate"><span class="pre">costmap_common_params.yaml</span></code>这个有一part需要重点说明的：</p>
+<p>障碍物层输入是/scan ，不使用pointcloud是因为move_base底层代码逻辑，避障是使用世界系的点云的，其实避障使用body系点云应该是更合理的，所以我们把一定高度范围的pointcloud转成了/scan；其次是obstacle_range和raytrace_range两个参数，它会跟踪raytrace_range范围内的障碍物，但是只有在obstacle_range范围内的障碍物点才会被加到代价地图，所以我们前面在转/scan的出话题的时候加了那个1.5m就是为了把大部分点定到obstacle_range和raytrace_range中间，使得障碍物能够快速被刷新。</p>
+<p><img alt="../_images/image_4SSY1Z656X.png" src="../_images/image_4SSY1Z656X.png" /></p>
+<p>range_max</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="应用例子" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, hession.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
