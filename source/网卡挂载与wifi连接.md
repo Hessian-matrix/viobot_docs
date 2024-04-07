@@ -6,7 +6,7 @@ Viobot设备本身不具备无线功能，我们其实更推荐使用有线连�
 
 ![](image/84bb4f010f19ce57432588e9465ccc0_kbo9x9XVnn.jpg)
 
-### 1.把驱动文件放到设备里面
+### 一.把驱动文件放到设备里面
 
 ![](image/image_oXjrz4D_A6.png)
 
@@ -22,7 +22,7 @@ Viobot设备本身不具备无线功能，我们其实更推荐使用有线连�
 
 ![](image/image_NXwC7_dHr-.png)
 
-### 2.网卡挂载
+### 二.网卡挂载
 
 挂载网卡：
 
@@ -40,7 +40,7 @@ pro版：
 sudo insmod /home/PRR/Viobot/module/pro-8188eu.ko #pro版
 ```
 
-### 3.连接wifi
+### 三.连接wifi
 
 #### 1）查看设备状态
 
@@ -107,7 +107,7 @@ sudo nmcli connection up PRROBOT
 
 再重新用ifconfig查看ip即可
 
-### 4.设置开机自动连接wifi
+### 四.设置开机自动连接wifi
 
 创建一个 systemd service 文件：
 
@@ -143,7 +143,7 @@ sudo systemctl enable wifi-startup.service
 
 重启设备即可
 
-#### 5.其他指令
+#### 五.其他指令
 
 ```bash
 nmcli connection delete my-wifi #删除已经创建的网络连接配置my-wifi
