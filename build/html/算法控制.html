@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>算法控制 &mdash; viobot_doc 0.0 documentation</title>
+  <title>Viobot算法控制 &mdash; viobot_doc 0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="回环使用" href="%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html" />
-    <link rel="prev" title="硬件控制" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html" /> 
+    <link rel="prev" title="Viobot硬件控制" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,23 +50,28 @@
 <li class="toctree-l1"><a class="reference internal" href="Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html">硬件组成和接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%8B%E7%BB%8D.html">基本功能使用及介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">硬件控制</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">算法控制</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">一.上位机控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">Viobot输出数据说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">Viobot硬件控制</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Viobot算法控制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">一.上位机控制</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ros">二.ROS控制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">三.ROS状态反馈</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#http">四.http控制</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#vio">1）VIO算法启用</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">2）VIO算法停止</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">3）VIO算法重启</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vio">1)VIO算法启用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2）VIO算法停止</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3）VIO算法重启</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%BD%91%E5%8D%A1%E6%8C%82%E8%BD%BD%E4%B8%8Ewifi%E8%BF%9E%E6%8E%A5.html">Viobot网卡挂载与wifi连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Viobot%E6%95%B0%E6%8D%AE%E5%8C%85%E5%BD%95%E5%88%B6.html">Viobot数据包录制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application/index.html">应用例子</a></li>
 </ul>
 
         </div>
@@ -83,7 +88,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">算法控制</li>
+      <li class="breadcrumb-item active">Viobot算法控制</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/算法控制.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,10 +98,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="id1">
-<h1>算法控制<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<section id="id2">
-<h2>一.上位机控制<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+  <section id="viobot">
+<h1>Viobot算法控制<a class="headerlink" href="#viobot" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>一.上位机控制<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p><img alt="_images/image_0u3cscX-oK.png" src="_images/image_0u3cscX-oK.png" /></p>
 <p>   状态反馈在系统反馈出会根据当前系统状态显示。</p>
 <p>控制是在操作栏里面的一个选项三个按键。具体的已经在前面一篇基本功能使用及介绍中讲过了。</p>
@@ -113,28 +118,28 @@
 <p>分别对应着算法启动/停止，算法重启已经算法重置。</p>
 <p>话题名如下：</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">Type</span><span class="p">:</span><span class="w"> </span><span class="n">system_ctrl</span><span class="o">::</span><span class="n">algo_ctrl</span>
-<span class="nl">Topic</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">stereo1_ctrl</span><span class="w"> </span><span class="o">/</span><span class="n">stereo2_ctrl</span><span class="w"> </span><span class="o">/</span><span class="n">mono_ctrl</span>
+<span class="nl">Topic</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">viobot</span><span class="o">/</span><span class="n">stereo1_ctrl</span><span class="w"> </span><span class="o">/</span><span class="n">viobot</span><span class="o">/</span><span class="n">stereo2_ctrl</span><span class="w"> </span><span class="o">/</span><span class="n">viobot</span><span class="o">/</span><span class="n">mono_ctrl</span>
 </pre></div>
 </div>
 <p>命令行发送话题命令如下：</p>
 <p>启动stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: false}&quot;</span>
 </pre></div>
 </div>
 <p>停止stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: false, algo_reboot: false, algo_reset: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: false, algo_reboot: false, algo_reset: false}&quot;</span>
 </pre></div>
 </div>
 <p>重启stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: true, algo_reset: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: true, algo_reset: false}&quot;</span>
 </pre></div>
 </div>
 <p>重置stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: true}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: true}&quot;</span>
 </pre></div>
 </div>
 <p>ROSdemo里面的例子</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span><span class="w"> </span><span class="n">pub_stereo2_ctrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">system_ctrl</span><span class="o">::</span><span class="n">algo_ctrl</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/stereo2_ctrl&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span><span class="w"> </span><span class="n">pub_stereo2_ctrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">system_ctrl</span><span class="o">::</span><span class="n">algo_ctrl</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/viobot/stereo2_ctrl&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 <span class="n">system_ctrl</span><span class="o">::</span><span class="n">algo_ctrl</span><span class="w"> </span><span class="n">algo_set</span><span class="p">;</span>
 <span class="n">algo_set</span><span class="p">.</span><span class="n">algo_enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <span class="n">algo_set</span><span class="p">.</span><span class="n">algo_reboot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
@@ -175,24 +180,22 @@
 </div>
 <p>ROS2</p>
 <p>启动stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: false}&quot;</span>
 </pre></div>
 </div>
 <p>停止stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: false, algo_reboot: false, algo_reset: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: false, algo_reboot: false, algo_reset: false}&quot;</span>
 </pre></div>
 </div>
 <p>重启stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: true, algo_reset: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: true, algo_reset: false}&quot;</span>
 </pre></div>
 </div>
 <p>重置stereo2算法</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: true}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/viobot/stereo2_ctrl<span class="w"> </span>system_ctrl/AlgoCtrl<span class="w"> </span><span class="s2">&quot;{header: {stamp: {sec: 0, nanosec: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: true}&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="id3">
-<h2>三.ROS状态反馈<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>三.ROS状态反馈</p>
 <p><img alt="_images/image_OE94QNS_FE.png" src="_images/image_OE94QNS_FE.png" /></p>
 <p>算法的状态也是一个ROS msg，具体的msg信息可以查看demo里面的msg包的algo_status.msg</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span><span class="w"> </span><span class="n">header</span>
@@ -201,7 +204,7 @@
 </div>
 <p>直接字符串打印系统当前算法的状态对应上面枚举类型的七个字符串。</p>
 <p>ROSdemo里面的例子</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span><span class="w"> </span><span class="n">sub_algo_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/algo_status&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">algo_status_callback</span><span class="p">);</span><span class="c1">//定义订阅者并注册回调函数</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span><span class="w"> </span><span class="n">sub_algo_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/viobot/algo_status&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">algo_status_callback</span><span class="p">);</span><span class="c1">//定义订阅者并注册回调函数</span>
 </pre></div>
 </div>
 <p>回调函数</p>
@@ -214,27 +217,21 @@
 <section id="http">
 <h2>四.http控制<a class="headerlink" href="#http" title="Link to this heading"></a></h2>
 <section id="vio">
-<h3>1）VIO算法启用<a class="headerlink" href="#vio" title="Link to this heading"></a></h3>
+<h3>1)VIO算法启用<a class="headerlink" href="#vio" title="Link to this heading"></a></h3>
 <p><img alt="_images/image_kfSvwa5j1L.png" src="_images/image_kfSvwa5j1L.png" /></p>
 </section>
-<section id="id4">
-<h3>2）VIO算法停止<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="id2">
+<h3>2）VIO算法停止<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <p><img alt="_images/image_V3pUSeAttc.png" src="_images/image_V3pUSeAttc.png" /></p>
 </section>
-<section id="id5">
-<h3>3）VIO算法重启<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<section id="id3">
+<h3>3）VIO算法重启<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <p><img alt="_images/image_LMGTOQbkJZ.png" src="_images/image_LMGTOQbkJZ.png" /></p>
 <p>4）VIO算法重置</p>
 <p><img alt="_images/image_bfMHZprgLu.png" src="_images/image_bfMHZprgLu.png" /></p>
 <p>五.http反馈</p>
 <p><img alt="_images/image_OE94QNS_FE.png" src="_images/image_OE94QNS_FE.png" /></p>
 <p><img alt="_images/image_swVxYM0azC.png" src="_images/image_swVxYM0azC.png" /></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>std_msgs/Char<span class="w"> </span>/pr_loop/global_consistency<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, data: 1}&quot;</span>
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/stereo2_ctrl<span class="w"> </span>system_ctrl/algo_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, algo_enable: true, algo_reboot: false, algo_reset: false}&quot;</span>
-</pre></div>
-</div>
 </section>
 </section>
 </section>
@@ -243,7 +240,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html" class="btn btn-neutral float-left" title="硬件控制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html" class="btn btn-neutral float-left" title="Viobot硬件控制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html" class="btn btn-neutral float-right" title="回环使用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

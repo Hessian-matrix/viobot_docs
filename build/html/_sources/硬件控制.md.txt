@@ -1,4 +1,4 @@
-# 硬件控制
+# Viobot硬件控制
 
 ### 一.使用上位机控制
 
@@ -35,14 +35,14 @@ tof\_enable  true为开，false为关
 开启TOF
 
 ```bash
-rostopic pub -1 /system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: true, tof_depth: false, tof_amp: false, light: false}"
+rostopic pub -1 /viobot/system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: true, tof_depth: false, tof_amp: false, light: false}"
 
 ```
 
 关闭TOF
 
 ```bash
-rostopic pub -1 /system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}"
+rostopic pub -1 /viobot/system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}"
 
 ```
 
@@ -53,14 +53,14 @@ light  true为开，false为关
 开启补光灯
 
 ```bash
-rostopic pub -1 /system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: true}"
+rostopic pub -1 /viobot/system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: true}"
 
 ```
 
 关闭补光灯
 
 ```bash
-rostopic pub -1 /system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}"
+rostopic pub -1 /viobot/system_ctrl system_ctrl/viobot_ctrl "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}"
 ```
 
 #### 3）raw\_data输出设置
@@ -78,7 +78,7 @@ raw\_data输出设置是设置到http流输出的，默认是关的，如果使�
 ROSdemo里面的例子
 
 ```c++
-ros::Publisher pub_sys_ctrl = nh.advertise<system_ctrl::viobot_ctrl>("/system_ctrl", 2);
+ros::Publisher pub_sys_ctrl = nh.advertise<system_ctrl::viobot_ctrl>("/viobot/system_ctrl", 2);
 
 system_ctrl::viobot_ctrl viobot_set;
 viobot_set.image_select = 0;
@@ -123,7 +123,7 @@ while(ros::ok()){
 
 ```bash
 Type: system_ctrl::viobot_ctrl
-Topic: /sys_status
+Topic: /viobot/sys_status
 
 ```
 
@@ -134,7 +134,7 @@ Topic: /sys_status
 ROSdemo里面的例子
 
 ```c++
-ros::Subscriber sub_sys_status = nh.subscribe("/sys_status", 2, sys_status_callback);//注册订阅回调
+ros::Subscriber sub_sys_status = nh.subscribe("/viobot/sys_status", 2, sys_status_callback);//注册订阅回调
 
 ```
 

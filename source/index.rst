@@ -24,6 +24,7 @@ Welcome to viobot_doc's documentation!
    算法运行基本参数配置
    ROS_Master/index
    硬件接口使用/index
+   SDK测试例程/index
    application/index  
    
 

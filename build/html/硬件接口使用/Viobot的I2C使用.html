@@ -50,19 +50,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html">硬件组成和接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%8B%E7%BB%8D.html">基本功能使用及介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">硬件控制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">算法控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">Viobot输出数据说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">Viobot硬件控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">Viobot算法控制</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%BD%91%E5%8D%A1%E6%8C%82%E8%BD%BD%E4%B8%8Ewifi%E8%BF%9E%E6%8E%A5.html">Viobot网卡挂载与wifi连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E6%95%B0%E6%8D%AE%E5%8C%85%E5%BD%95%E5%88%B6.html">Viobot数据包录制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">硬件接口使用</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html">TF卡挂载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html">Viobot的TF卡挂载</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Viobot%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html">Viobot串口通信</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Viobot的I2C使用</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Viobot的I2C使用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.接口定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.硬件连接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.程序编译测试</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mpu9250-h">（1）mpu9250.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mpu9250-cpp">（2）mpu9250.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mpu9250-node-cpp">（3）mpu9250_node.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">（4）效果展示</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Viobot%E7%9A%84CAN%E4%BD%BF%E7%94%A8.html">Viobot的CAN使用</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用例子</a></li>
 </ul>
 
         </div>
@@ -92,6 +108,327 @@
              
   <section id="vioboti2c">
 <h1>Viobot的I2C使用<a class="headerlink" href="#vioboti2c" title="Link to this heading"></a></h1>
+<p>下面我们来介绍Viobot的CAN口使用</p>
+<p><img alt="../_images/image_V_WvjD0TIb.png" src="../_images/image_V_WvjD0TIb.png" /></p>
+<section id="id1">
+<h2>1.接口定义<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>Viobot面有一个2*4pin的接口母座，接头我们发货的时候会放在盒子里面的。</p>
+<p>我们可以看到第一排从左到右引脚分别是GND SCL SDA GND</p>
+<p>第二排从左到右分别是RX TX CANL CANH</p>
+<p>对应的设备号：IIC6</p>
+</section>
+<section id="id2">
+<h2>2.硬件连接<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>我们以MPU9250的模块来做例子，由此也可以推到其他的iic设备。</p>
+<p>给模块供电后直接把Viobot和MPU9250的SCL、SDA分别对接起来。</p>
+</section>
+<section id="id3">
+<h2>3.程序编译测试<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>linux有自带的linux-I2C可以直接读写iic设备。</p>
+<p>因为使用的是mpu9250，所以程序里面的寄存器都是针对9250的。</p>
+<p>程序由三个文件组成，其实主要就是&lt;linux/i2c.h&gt;和&lt;linux/i2c-dev.h&gt;里面的write函数和read函数的简单使用。</p>
+<section id="mpu9250-h">
+<h3>（1）mpu9250.h<a class="headerlink" href="#mpu9250-h" title="Link to this heading"></a></h3>
+<p>里面定义了mpu9250的一些寄存器地址，以及声明了mpu9250的类：</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef _MPU9250_H</span>
+<span class="cp">#define _MPU9250_H</span>
+<span class="cm">/*C*/</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;errno.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cm">/*C++*/</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span><span class="c1">  </span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdexcept&gt;</span>
+<span class="cm">/*other*/</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fcntl.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="c1"> </span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;termios.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/stat.h&gt;</span><span class="c1"> </span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/ioctl.h&gt;</span><span class="c1"> </span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span><span class="c1"> </span>
+<span class="cm">/*I2C*/</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;linux/i2c.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;linux/i2c-dev.h&gt;</span>
+
+<span class="cp">#define I2C_DEV &quot;/dev/i2c-6&quot;</span>
+<span class="cp">#define Device_Address 0x68</span>
+<span class="c1">// #define Device_Address 0x69</span>
+
+<span class="c1">//MPU6500的内部寄存器</span>
+<span class="cp">#define MPU_SELF_TESTX_REG    0X0D  </span><span class="c1">//自检寄存器X</span>
+<span class="cp">#define MPU_SELF_TESTY_REG    0X0E  </span><span class="c1">//自检寄存器Y</span>
+<span class="cp">#define MPU_SELF_TESTZ_REG    0X0F  </span><span class="c1">//自检寄存器Z</span>
+<span class="cp">#define MPU_SELF_TESTA_REG    0X10  </span><span class="c1">//自检寄存器A</span>
+<span class="cp">#define MPU_SAMPLE_RATE_REG    0X19  </span><span class="c1">//采样频率分频器</span>
+<span class="cp">#define MPU_CFG_REG        0X1A  </span><span class="c1">//配置寄存器</span>
+<span class="cp">#define MPU_GYRO_CFG_REG    0X1B  </span><span class="c1">//陀螺仪配置寄存器</span>
+<span class="cp">#define MPU_ACCEL_CFG_REG    0X1C  </span><span class="c1">//加速度计配置寄存器</span>
+<span class="cp">#define MPU_MOTION_DET_REG    0X1F  </span><span class="c1">//运动检测阀值设置寄存器</span>
+<span class="cp">#define MPU_FIFO_EN_REG      0X23  </span><span class="c1">//FIFO使能寄存器</span>
+<span class="cp">#define MPU_I2CMST_CTRL_REG    0X24  </span><span class="c1">//IIC主机控制寄存器</span>
+<span class="cp">#define MPU_I2CSLV0_ADDR_REG  0X25  </span><span class="c1">//IIC从机0器件地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV0_REG      0X26  </span><span class="c1">//IIC从机0数据地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV0_CTRL_REG  0X27  </span><span class="c1">//IIC从机0控制寄存器</span>
+<span class="cp">#define MPU_I2CSLV1_ADDR_REG  0X28  </span><span class="c1">//IIC从机1器件地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV1_REG      0X29  </span><span class="c1">//IIC从机1数据地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV1_CTRL_REG  0X2A  </span><span class="c1">//IIC从机1控制寄存器</span>
+<span class="cp">#define MPU_I2CSLV2_ADDR_REG  0X2B  </span><span class="c1">//IIC从机2器件地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV2_REG      0X2C  </span><span class="c1">//IIC从机2数据地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV2_CTRL_REG  0X2D  </span><span class="c1">//IIC从机2控制寄存器</span>
+<span class="cp">#define MPU_I2CSLV3_ADDR_REG  0X2E  </span><span class="c1">//IIC从机3器件地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV3_REG      0X2F  </span><span class="c1">//IIC从机3数据地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV3_CTRL_REG  0X30  </span><span class="c1">//IIC从机3控制寄存器</span>
+<span class="cp">#define MPU_I2CSLV4_ADDR_REG  0X31  </span><span class="c1">//IIC从机4器件地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV4_REG      0X32  </span><span class="c1">//IIC从机4数据地址寄存器</span>
+<span class="cp">#define MPU_I2CSLV4_DO_REG    0X33  </span><span class="c1">//IIC从机4写数据寄存器</span>
+<span class="cp">#define MPU_I2CSLV4_CTRL_REG  0X34  </span><span class="c1">//IIC从机4控制寄存器</span>
+<span class="cp">#define MPU_I2CSLV4_DI_REG    0X35  </span><span class="c1">//IIC从机4读数据寄存器</span>
+
+<span class="cp">#define MPU_I2CMST_STA_REG    0X36  </span><span class="c1">//IIC主机状态寄存器</span>
+<span class="cp">#define MPU_INTBP_CFG_REG    0X37  </span><span class="c1">//中断/旁路设置寄存器</span>
+<span class="cp">#define MPU_INT_EN_REG      0X38  </span><span class="c1">//中断使能寄存器</span>
+<span class="cp">#define MPU_INT_STA_REG      0X3A  </span><span class="c1">//中断状态寄存器</span>
+
+<span class="cp">#define MPU_ACCEL_XOUTH_REG    0X3B  </span><span class="c1">//加速度值,X轴高8位寄存器</span>
+<span class="cp">#define MPU_ACCEL_XOUTL_REG    0X3C  </span><span class="c1">//加速度值,X轴低8位寄存器</span>
+<span class="cp">#define MPU_ACCEL_YOUTH_REG    0X3D  </span><span class="c1">//加速度值,Y轴高8位寄存器</span>
+<span class="cp">#define MPU_ACCEL_YOUTL_REG    0X3E  </span><span class="c1">//加速度值,Y轴低8位寄存器</span>
+<span class="cp">#define MPU_ACCEL_ZOUTH_REG    0X3F  </span><span class="c1">//加速度值,Z轴高8位寄存器</span>
+<span class="cp">#define MPU_ACCEL_ZOUTL_REG    0X40  </span><span class="c1">//加速度值,Z轴低8位寄存器</span>
+
+<span class="cp">#define MPU_TEMP_OUTH_REG    0X41  </span><span class="c1">//温度值高八位寄存器</span>
+<span class="cp">#define MPU_TEMP_OUTL_REG    0X42  </span><span class="c1">//温度值低8位寄存器</span>
+
+<span class="cp">#define MPU_GYRO_XOUTH_REG    0X43  </span><span class="c1">//陀螺仪值,X轴高8位寄存器</span>
+<span class="cp">#define MPU_GYRO_XOUTL_REG    0X44  </span><span class="c1">//陀螺仪值,X轴低8位寄存器</span>
+<span class="cp">#define MPU_GYRO_YOUTH_REG    0X45  </span><span class="c1">//陀螺仪值,Y轴高8位寄存器</span>
+<span class="cp">#define MPU_GYRO_YOUTL_REG    0X46  </span><span class="c1">//陀螺仪值,Y轴低8位寄存器</span>
+<span class="cp">#define MPU_GYRO_ZOUTH_REG    0X47  </span><span class="c1">//陀螺仪值,Z轴高8位寄存器</span>
+<span class="cp">#define MPU_GYRO_ZOUTL_REG    0X48  </span><span class="c1">//陀螺仪值,Z轴低8位寄存器</span>
+
+<span class="cp">#define MPU_I2CSLV0_DO_REG    0X63  </span><span class="c1">//IIC从机0数据寄存器</span>
+<span class="cp">#define MPU_I2CSLV1_DO_REG    0X64  </span><span class="c1">//IIC从机1数据寄存器</span>
+<span class="cp">#define MPU_I2CSLV2_DO_REG    0X65  </span><span class="c1">//IIC从机2数据寄存器</span>
+<span class="cp">#define MPU_I2CSLV3_DO_REG    0X66  </span><span class="c1">//IIC从机3数据寄存器</span>
+
+<span class="cp">#define MPU_I2CMST_DELAY_REG  0X67  </span><span class="c1">//IIC主机延时管理寄存器</span>
+<span class="cp">#define MPU_SIGPATH_RST_REG    0X68  </span><span class="c1">//信号通道复位寄存器</span>
+<span class="cp">#define MPU_MDETECT_CTRL_REG  0X69  </span><span class="c1">//运动检测控制寄存器</span>
+<span class="cp">#define MPU_USER_CTRL_REG    0X6A  </span><span class="c1">//用户控制寄存器</span>
+<span class="cp">#define MPU_PWR_MGMT1_REG    0X6B  </span><span class="c1">//电源管理寄存器1</span>
+<span class="cp">#define MPU_PWR_MGMT2_REG    0X6C  </span><span class="c1">//电源管理寄存器2 </span>
+<span class="cp">#define MPU_FIFO_CNTH_REG    0X72  </span><span class="c1">//FIFO计数寄存器高八位</span>
+<span class="cp">#define MPU_FIFO_CNTL_REG    0X73  </span><span class="c1">//FIFO计数寄存器低八位</span>
+<span class="cp">#define MPU_FIFO_RW_REG      0X74  </span><span class="c1">//FIFO读写寄存器</span>
+<span class="cp">#define MPU_DEVICE_ID_REG    0X75  </span><span class="c1">//器件ID寄存器</span>
+
+<span class="c1">//定义数字低通滤波器阈值</span>
+<span class="cp">#define MPU9250_DLPF_BW_256      0x00</span>
+<span class="cp">#define MPU9250_DLPF_BW_188      0x01</span>
+<span class="cp">#define MPU9250_DLPF_BW_98      0x02</span>
+<span class="cp">#define MPU9250_DLPF_BW_42      0x03</span>
+<span class="cp">#define MPU9250_DLPF_BW_20      0x04</span>
+<span class="cp">#define MPU9250_DLPF_BW_10      0x05</span>
+<span class="cp">#define MPU9250_DLPF_BW_5      0x06</span>
+
+<span class="cp">#define gravity 9.8</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MPU9250</span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">MPU9250</span><span class="p">();</span>
+<span class="w">    </span><span class="o">~</span><span class="n">MPU9250</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Init</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">getAccelGyroData</span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="o">*</span><span class="n">AccelGyroData</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">MPU9250_Temp_Read</span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="o">*</span><span class="n">TempData</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// void MPU9250_Set_ZeroBias();</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+<section id="mpu9250-cpp">
+<h3>（2）mpu9250.cpp<a class="headerlink" href="#mpu9250-cpp" title="Link to this heading"></a></h3>
+<p>mpu9250的类实现，包含了初始化mpu9250、读取加速度和角速度原始数据，以及读取温度数据几个方法：</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MPU9250_demo/mpu9250.h&quot;</span>
+<span class="c1">// #include &quot;mpu9250.h&quot;</span>
+
+<span class="n">MPU9250</span><span class="o">::</span><span class="n">MPU9250</span><span class="p">(){</span>
+<span class="w">    </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="n">I2C_DEV</span><span class="p">,</span><span class="n">O_RDWR</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="c1">// printf(&quot;open %s failed\n&quot;,I2C_DEV);</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to open &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">I2C_DEV</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; device&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ioctl</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">I2C_SLAVE</span><span class="p">,</span><span class="n">Device_Address</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="c1">// printf(&quot;setenv address faile ret: %x \n&quot;, ret);</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Failed to set I2C address&quot;</span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">MPU9250</span><span class="o">::~</span><span class="n">MPU9250</span><span class="p">(){</span>
+<span class="w">    </span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MPU9250</span><span class="o">::</span><span class="n">Init</span><span class="p">(){</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">//复位MPU9250</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_PWR_MGMT1_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">buf</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//唤醒MPU9250，并选择陀螺仪x轴PLL为时钟源 (MPU9250_RA_PWR_MGMT_1, 0x01)</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_PWR_MGMT1_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">buf</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//禁止中断</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_INT_EN_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x18</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">//陀螺仪满量程+-250度/秒 (最低分辨率 = 2^15/250 = 131.072LSB/度/秒</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_GYRO_CFG_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//加速度满量程+-4g   (最低分辨率 = 2^15/4g = 8192/g )</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_ACCEL_CFG_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x08</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//设置陀螺的输出为1kHZ,DLPF=20Hz</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_CFG_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU9250_DLPF_BW_20</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//采样分频 (采样频率 = 陀螺仪输出频率 / (1+DIV)，采样频率1000hz）</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_SAMPLE_RATE_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// MPU 可直接访问MPU9250辅助I2C</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_INTBP_CFG_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x82</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/*--------------TEST-------------*/</span>
+<span class="w">    </span><span class="c1">// addr[0] = MPU_DEVICE_ID_REG;</span>
+<span class="w">    </span><span class="c1">// write(fd,addr,1);</span>
+<span class="w">    </span><span class="c1">// read(fd,buf,1);</span>
+<span class="w">    </span><span class="c1">// printf(&quot;%x\r\n&quot;,buf[0]);</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">MPU9250</span><span class="o">::</span><span class="n">getAccelGyroData</span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="o">*</span><span class="n">AccelGyroData</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">addr</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+
+<span class="w">    </span><span class="n">addr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_ACCEL_XOUTH_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">addr</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">buf</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">AccelGyroData</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)((</span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">|</span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">AccelGyroData</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)((</span><span class="n">buf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">|</span><span class="n">buf</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">AccelGyroData</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)((</span><span class="n">buf</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">|</span><span class="n">buf</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+
+<span class="w">    </span><span class="n">addr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_GYRO_XOUTH_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">addr</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">buf</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">AccelGyroData</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)((</span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">|</span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">AccelGyroData</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)((</span><span class="n">buf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">|</span><span class="n">buf</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">AccelGyroData</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)((</span><span class="n">buf</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">|</span><span class="n">buf</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MPU9250</span><span class="o">::</span><span class="n">MPU9250_Temp_Read</span><span class="p">(</span><span class="kt">int16_t</span><span class="w"> </span><span class="o">*</span><span class="n">TempData</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">addr</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">short</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">addr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPU_TEMP_OUTH_REG</span><span class="p">;</span>
+<span class="w">    </span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">addr</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">buf</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span><span class="w">   </span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)((</span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">   </span><span class="o">*</span><span class="n">TempData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">21.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">data</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">333.87f</span><span class="p">);</span><span class="w">        </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="mpu9250-node-cpp">
+<h3>（3）mpu9250_node.cpp<a class="headerlink" href="#mpu9250-node-cpp" title="Link to this heading"></a></h3>
+<p>这里加了imu数据转化和话题发送，如果是ROS2可自行把话题发送改成ROS的，不使用ROS直接打印也可以。</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ros/ros.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sensor_msgs/Imu.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;serial/serial.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/String.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MPU9250_demo/mpu9250.h&quot;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">accelgyrodata</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">MPU9250</span><span class="w"> </span><span class="n">mpu9250</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="n">argv</span><span class="p">,</span><span class="s">&quot;MPU9250_demo&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="w"> </span><span class="n">nh</span><span class="p">;</span>
+<span class="w">    </span><span class="n">mpu9250</span><span class="p">.</span><span class="n">Init</span><span class="p">();</span><span class="c1">//1khz输出频率</span>
+
+<span class="w">    </span><span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span><span class="w"> </span><span class="n">imu_pub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">Imu</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;imu&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w">   </span>
+
+<span class="w">    </span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">Imu</span><span class="w"> </span><span class="n">imu_msg</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">ros</span><span class="o">::</span><span class="n">Rate</span><span class="w"> </span><span class="n">loop_rate</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">()){</span>
+<span class="w">        </span><span class="n">mpu9250</span><span class="p">.</span><span class="n">getAccelGyroData</span><span class="p">(</span><span class="n">accelgyrodata</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ros</span><span class="o">::</span><span class="n">Time</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imu_frame&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">angular_velocity</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accelgyrodata</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">131.072</span><span class="p">;</span>
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">angular_velocity</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accelgyrodata</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">131.072</span><span class="p">;</span>
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">angular_velocity</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accelgyrodata</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">131.072</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">linear_acceleration</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accelgyrodata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">8192.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gravity</span><span class="p">;</span>
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">linear_acceleration</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accelgyrodata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">8192.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gravity</span><span class="p">;</span>
+<span class="w">        </span><span class="n">imu_msg</span><span class="p">.</span><span class="n">linear_acceleration</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accelgyrodata</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">8192.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gravity</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;imu_msg.linear_acceleration.x = %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">imu_msg</span><span class="p">.</span><span class="n">linear_acceleration</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;imu_msg.linear_acceleration.y = %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">imu_msg</span><span class="p">.</span><span class="n">linear_acceleration</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;imu_msg.linear_acceleration.z = %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">imu_msg</span><span class="p">.</span><span class="n">linear_acceleration</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;imu_msg.angular_velocity.x = %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">imu_msg</span><span class="p">.</span><span class="n">angular_velocity</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;imu_msg.angular_velocity.y = %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">imu_msg</span><span class="p">.</span><span class="n">angular_velocity</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;imu_msg.angular_velocity.z = %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">imu_msg</span><span class="p">.</span><span class="n">angular_velocity</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">imu_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">imu_msg</span><span class="p">);</span>
+<span class="w">        </span><span class="n">loop_rate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>（4）效果展示<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>这个代码效果就是不断的读取mpu9250的数据并打印到终端</p>
+<p><img alt="../_images/image_xzE9Pb7J9H.png" src="../_images/image_xzE9Pb7J9H.png" /></p>
+</section>
+</section>
 </section>
 
 

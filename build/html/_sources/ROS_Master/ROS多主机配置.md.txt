@@ -47,7 +47,6 @@ pip3 install grpcio
 pip install grpcio-tools
 cd ..
 catkin build
-
 ```
 
 ## 2.配置网络环境
@@ -56,7 +55,6 @@ catkin build
 
 ```bash
 sudo gedit /etc/hosts
-
 ```
 
 添加Viobot的IP和hostname
@@ -67,7 +65,6 @@ sudo gedit /etc/hosts
 
 ```bash
 sudo vim /etc/hosts
-
 ```
 
 添加虚拟机的IP和hostname

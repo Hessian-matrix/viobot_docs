@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>硬件控制 &mdash; viobot_doc 0.0 documentation</title>
+  <title>Viobot硬件控制 &mdash; viobot_doc 0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="算法控制" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html" />
-    <link rel="prev" title="输出数据说明" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" /> 
+    <link rel="next" title="Viobot算法控制" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html" />
+    <link rel="prev" title="Viobot输出数据说明" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,24 +50,30 @@
 <li class="toctree-l1"><a class="reference internal" href="Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html">硬件组成和接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%8B%E7%BB%8D.html">基本功能使用及介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">硬件控制</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">一.使用上位机控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">Viobot输出数据说明</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Viobot硬件控制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">一.使用上位机控制</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ros">二.ROS控制</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tof-tof">1）TOF开关（TOF版本）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">2）补光灯开关（补光灯版）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2）补光灯开关（补光灯版）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#raw-data">3）raw_data输出设置</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">三.ROS状态反馈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">三.ROS状态反馈</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#http">四.http控制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">五.http状态反馈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">五.http状态反馈</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">算法控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">Viobot算法控制</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%BD%91%E5%8D%A1%E6%8C%82%E8%BD%BD%E4%B8%8Ewifi%E8%BF%9E%E6%8E%A5.html">Viobot网卡挂载与wifi连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Viobot%E6%95%B0%E6%8D%AE%E5%8C%85%E5%BD%95%E5%88%B6.html">Viobot数据包录制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application/index.html">应用例子</a></li>
 </ul>
 
         </div>
@@ -84,7 +90,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">硬件控制</li>
+      <li class="breadcrumb-item active">Viobot硬件控制</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/硬件控制.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -94,10 +100,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="id1">
-<h1>硬件控制<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<section id="id2">
-<h2>一.使用上位机控制<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+  <section id="viobot">
+<h1>Viobot硬件控制<a class="headerlink" href="#viobot" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>一.使用上位机控制<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p><img alt="_images/image_pywunBUYTV.png" src="_images/image_pywunBUYTV.png" /></p>
 <p> TOF版本设备点击TOF ON即可开启TOF，开启后按键会变成TOF OFF，点击TOF OFF即可关闭TOF</p>
 <p> 补光灯版本设备点击LED ON即可开启LED ，开启后按键会变成LED OFF，点击LED OFF即可关闭LED </p>
@@ -121,23 +127,23 @@ bool<span class="w"> </span>light<span class="w"> </span><span class="c1">#ON/OF
 <h3>1）TOF开关（TOF版本）<a class="headerlink" href="#tof-tof" title="Link to this heading"></a></h3>
 <p>tof_enable  true为开，false为关</p>
 <p>开启TOF</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: true, tof_depth: false, tof_amp: false, light: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: true, tof_depth: false, tof_amp: false, light: false}&quot;</span>
 </pre></div>
 </div>
 <p>关闭TOF</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}&quot;</span>
 </pre></div>
 </div>
 </section>
-<section id="id3">
-<h3>2）补光灯开关（补光灯版）<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="id2">
+<h3>2）补光灯开关（补光灯版）<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <p>light  true为开，false为关</p>
 <p>开启补光灯</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: true}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: true}&quot;</span>
 </pre></div>
 </div>
 <p>关闭补光灯</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-1<span class="w"> </span>/viobot/system_ctrl<span class="w"> </span>system_ctrl/viobot_ctrl<span class="w"> </span><span class="s2">&quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, image_select: 0, imu_raw: false, tof_enable: false, tof_depth: false, tof_amp: false, light: false}&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -151,7 +157,7 @@ bool<span class="w"> </span>tof_amp<span class="w"> </span><span class="c1">#ON/
 </div>
 <p>raw_data输出设置是设置到http流输出的，默认是关的，如果使用ROS开发也不需要开，一直都是false就行。</p>
 <p>ROSdemo里面的例子</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span><span class="w"> </span><span class="n">pub_sys_ctrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">system_ctrl</span><span class="o">::</span><span class="n">viobot_ctrl</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/system_ctrl&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span><span class="w"> </span><span class="n">pub_sys_ctrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">system_ctrl</span><span class="o">::</span><span class="n">viobot_ctrl</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/viobot/system_ctrl&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 
 <span class="n">system_ctrl</span><span class="o">::</span><span class="n">viobot_ctrl</span><span class="w"> </span><span class="n">viobot_set</span><span class="p">;</span>
 <span class="n">viobot_set</span><span class="p">.</span><span class="n">image_select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -193,16 +199,16 @@ bool<span class="w"> </span>tof_amp<span class="w"> </span><span class="c1">#ON/
 </div>
 </section>
 </section>
-<section id="id4">
-<h2>三.ROS状态反馈<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<section id="id3">
+<h2>三.ROS状态反馈<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Type:<span class="w"> </span>system_ctrl::viobot_ctrl
-Topic:<span class="w"> </span>/sys_status
+Topic:<span class="w"> </span>/viobot/sys_status
 </pre></div>
 </div>
 <p><img alt="_images/image_q-FdLWpD_3.png" src="_images/image_q-FdLWpD_3.png" /></p>
 <p>这个话题是一秒发送一次的。</p>
 <p>ROSdemo里面的例子</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span><span class="w"> </span><span class="n">sub_sys_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/sys_status&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">sys_status_callback</span><span class="p">);</span><span class="c1">//注册订阅回调</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span><span class="w"> </span><span class="n">sub_sys_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/viobot/sys_status&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">sys_status_callback</span><span class="p">);</span><span class="c1">//注册订阅回调</span>
 </pre></div>
 </div>
 <p>回调函数，1s触发一次，打印接收到的消息。</p>
@@ -237,8 +243,8 @@ Topic:<span class="w"> </span>/sys_status
 <p>按照协议发送即可（补光灯版没有TOF，TOF版没有补光灯）</p>
 <p><img alt="_images/image_WKQEuUKH5Y.png" src="_images/image_WKQEuUKH5Y.png" /></p>
 </section>
-<section id="id5">
-<h2>五.http状态反馈<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<section id="id4">
+<h2>五.http状态反馈<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
 <p><img alt="_images/image_5ZCBA6S9fY.png" src="_images/image_5ZCBA6S9fY.png" /></p>
 </section>
 </section>
@@ -247,8 +253,8 @@ Topic:<span class="w"> </span>/sys_status
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" class="btn btn-neutral float-left" title="输出数据说明" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html" class="btn btn-neutral float-right" title="算法控制" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" class="btn btn-neutral float-left" title="Viobot输出数据说明" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html" class="btn btn-neutral float-right" title="Viobot算法控制" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

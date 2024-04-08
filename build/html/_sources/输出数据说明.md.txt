@@ -1,20 +1,20 @@
-# 输出数据说明
+# Viobot输出数据说明
 
 ## 一.原始数据
 
 ### 1.ROS话题
 
-#### 1）相机原始图像数据
+#### 1)相机原始图像数据
 
 Type: `sensor_msgs::Image`
 
-Topic: 左目：`/image_left`  右目：`/image_right`
+Topic: 左目：`/viobot/image_left`  右目：`/viobot/image_right`
 
 #### 2）imu数据
 
 Type: `sensor_msgs::Imu`
 
-Topic: `/imu`
+Topic: `/viobot/imu`
 
 #### 3）TOF数据
 
@@ -22,7 +22,7 @@ Topic: `/imu`
 
 Type: `sensor_msgs::PointCloud2`
 
-Topic: `/tof_cloud`
+Topic: `/viobot/tof_cloud`
 
 (x,y,z)
 
@@ -30,13 +30,13 @@ Topic: `/tof_cloud`
 
 Type: `sensor_msgs::Image`
 
-Topic: `/depth_image`
+Topic: `/viobot/depth_image`
 
 幅度图：
 
 Type: `sensor_msgs::Image`
 
-Topic: `/amp_image`
+Topic: `/viobot/amp_image`
 
 #### 4）系统状态
 
@@ -44,7 +44,7 @@ Topic: `/amp_image`
 
 Type: system\_ctrl::viobot\_ctrl
 
-Topic: `/sys\_status`
+Topic: /viobot/sys\_status
 
 ### 2.http输出
 
@@ -58,7 +58,7 @@ Topic: `/sys\_status`
 
 Type: `nav_msgs::Odometry`
 
-Topic:`/pr_loop/odometry_rect`
+Topic:`/viobot/pr_loop/odometry_rect`
 
 `Odometry`是包含了位姿(pose)和速度(twist)的.
 
@@ -80,7 +80,7 @@ Topic:`/pr_loop/odometry_rect`
 
 ![](image/image_iyk0-M018A.png)
 
-此点云的ROS话题为：Type: `sensor_msgs::PointCloud2` Topic:`/pr_loop/points`
+此点云的ROS话题为：Type: `sensor_msgs::PointCloud2` Topic:`/viobot/pr_loop/points`
 
 注意：点云生成是在产生新的关键帧的时候，所以点云的发布频率是不固定的，它的发布频率跟位姿发布频率是一致的。
 
@@ -90,7 +90,7 @@ Topic:`/pr_loop/odometry_rect`
 
 ![](image/image_u04WAJRCss.png)
 
-此点云的ROS话题为：Type: `sensor_msgs::PointCloud2` Topic:`/pr_loop/points_rdf`
+此点云的ROS话题为：Type: `sensor_msgs::PointCloud2` Topic:`/viobot/pr_loop/points_rdf`
 
 ### （3）TOF融合点云（TOF版）
 
@@ -100,7 +100,7 @@ Topic:`/pr_loop/odometry_rect`
 
 ![](image/image_zvKTLIcjbC.png)
 
-此点云的ROS话题为：Type: `sensor_msgs::PointCloud2` Topic:`/pr_loop/tof_points`
+此点云的ROS话题为：Type: `sensor_msgs::PointCloud2` Topic:`/viobot/pr_loop/tof_points`
 
 发布频率同样是与位姿发布频率一致。
 
@@ -108,9 +108,9 @@ Topic:`/pr_loop/odometry_rect`
 
 开启算法之后用户可以看到加了一个`_adjusted`后缀的点云
 
-`/pr_loop/points_adjusted`
+`/viobot/pr_loop/points_adjusted`
 
-`/pr_loop/tof_points_adjusted`
+`/viobot/pr_loop/tof_points_adjusted`
 
 这两组是后续建全局先验全局地图使用的，后续教程会慢慢讲解。
 
@@ -121,7 +121,7 @@ Topic:`/pr_loop/odometry_rect`
 #### 1）ROS话题
 
 Type:`sensor_msgs::CameraInfo`
-Topic: 左目内参：`/camera_left_info ` 右目内参：`/camera_right_info` tof内参：`/tof_info`
+Topic: 左目内参：`/viobot/camera_left_info ` 右目内参：`/viobot/camera_right_info` tof内参：`/viobot/tof_info`
 
 #### 2）http
 

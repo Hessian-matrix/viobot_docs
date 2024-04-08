@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Viobot的I2C使用" href="Viobot%E7%9A%84I2C%E4%BD%BF%E7%94%A8.html" />
-    <link rel="prev" title="TF卡挂载" href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html" /> 
+    <link rel="prev" title="Viobot的TF卡挂载" href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,19 +50,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html">硬件组成和接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%8B%E7%BB%8D.html">基本功能使用及介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">硬件控制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">算法控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">Viobot输出数据说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">Viobot硬件控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">Viobot算法控制</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%BD%91%E5%8D%A1%E6%8C%82%E8%BD%BD%E4%B8%8Ewifi%E8%BF%9E%E6%8E%A5.html">Viobot网卡挂载与wifi连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E6%95%B0%E6%8D%AE%E5%8C%85%E5%BD%95%E5%88%B6.html">Viobot数据包录制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">硬件接口使用</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html">TF卡挂载</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Viobot串口通信</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html">Viobot的TF卡挂载</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Viobot串口通信</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.接口定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.硬件连接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.代码测试</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ros">ROS版本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ros2">ROS2版本</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Viobot%E7%9A%84I2C%E4%BD%BF%E7%94%A8.html">Viobot的I2C使用</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Viobot%E7%9A%84CAN%E4%BD%BF%E7%94%A8.html">Viobot的CAN使用</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用例子</a></li>
 </ul>
 
         </div>
@@ -92,13 +106,211 @@
              
   <section id="viobot">
 <h1>Viobot串口通信<a class="headerlink" href="#viobot" title="Link to this heading"></a></h1>
+<p>下面我们来介绍Viobot的串口使用</p>
+<p><img alt="../_images/image_jEEyqtcuFF.png" src="../_images/image_jEEyqtcuFF.png" /></p>
+<section id="id1">
+<h2>1.接口定义<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>Viobot面有一个2*4pin的接口母座，接头我们发货的时候会放在盒子里面的。</p>
+<p>我们可以看到第一排从左到右引脚分别是GND SCL SDA GND</p>
+<p>第二排从左到右分别是RX TX CANL CANH</p>
+<p>对应的设备号： 基础版串口为ttyS8  pro版串口为ttyS0</p>
+</section>
+<section id="id2">
+<h2>2.硬件连接<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>此处使用Viobot与windows电脑的串口调试助手作为例子。使用的是pro版，如果使用基础版只需要把Viobot的设备名称换一下即可。</p>
+<p>我们先拿出一个市面上常用的串口转usb模块连接好Viobot和我们自己的电脑。GND连接好，Viobot的RX接模块的TX，Viobot的TX接模块的RX。</p>
+<p><img alt="../_images/image_wQRXLqH8-R.png" src="../_images/image_wQRXLqH8-R.png" /></p>
+</section>
+<section id="id3">
+<h2>3.代码测试<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>这里我们使用比较方便的ROS串口库，当然也可以自己写串口通信，这里只是作为一个样例，尽量简单方便，因为Viobot出厂系统是自带了ROS环境的，即使开发者在主要开发时使用ROS，也可以根据这个教程直接使用Viobot的串口。</p>
+<section id="ros">
+<h3>ROS版本<a class="headerlink" href="#ros" title="Link to this heading"></a></h3>
+<section id="ros-serial">
+<h4>（1）安装ros-serial库<a class="headerlink" href="#ros-serial" title="Link to this heading"></a></h4>
+<p>  这个库前期出厂的设备没有默认安装，需要用户自己联网安装一下</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-noetic-serial
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h4>（2）编译代码<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<p>将代码放到Viobot里面自己的工作空间里面编译，代码也比较简单，初始化一个串口对象，然后进到一个1hz的循环里面，循环里面读取串口接收数据和发送字符串。</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ros/ros.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;serial/serial.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/String.h&gt;</span>
+
+<span class="n">serial</span><span class="o">::</span><span class="n">Serial</span><span class="w"> </span><span class="n">my_serial</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">my_serial_init</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">port</span><span class="p">,</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">baudrate</span><span class="p">){</span>
+<span class="w">    </span><span class="n">my_serial</span><span class="p">.</span><span class="n">setPort</span><span class="p">(</span><span class="n">port</span><span class="p">);</span>
+<span class="w">    </span><span class="n">my_serial</span><span class="p">.</span><span class="n">setBaudrate</span><span class="p">(</span><span class="n">baudrate</span><span class="p">);</span>
+<span class="w">    </span><span class="n">serial</span><span class="o">::</span><span class="n">Timeout</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serial</span><span class="o">::</span><span class="n">Timeout</span><span class="o">::</span><span class="n">simpleTimeout</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">my_serial</span><span class="p">.</span><span class="n">setTimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
+<span class="w">    </span><span class="n">my_serial</span><span class="p">.</span><span class="n">setParity</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">parity_t</span><span class="o">::</span><span class="n">parity_none</span><span class="p">);</span>
+<span class="w">    </span><span class="n">my_serial</span><span class="p">.</span><span class="n">setBytesize</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">bytesize_t</span><span class="o">::</span><span class="n">eightbits</span><span class="p">);</span>
+<span class="w">    </span><span class="n">my_serial</span><span class="p">.</span><span class="n">setFlowcontrol</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">flowcontrol_t</span><span class="o">::</span><span class="n">flowcontrol_none</span><span class="p">);</span>
+<span class="w">    </span><span class="n">my_serial</span><span class="p">.</span><span class="n">setStopbits</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">stopbits_t</span><span class="o">::</span><span class="n">stopbits_one</span><span class="p">);</span>
+<span class="w">    </span><span class="k">try</span><span class="p">{</span>
+<span class="w">        </span><span class="n">my_serial</span><span class="p">.</span><span class="n">open</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">catch</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="w"> </span><span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+<span class="w">        </span><span class="n">ROS_ERROR_STREAM</span><span class="p">(</span><span class="s">&quot;Unable to open port.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">my_serial</span><span class="p">.</span><span class="n">isOpen</span><span class="p">()){</span>
+<span class="w">        </span><span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;Serial Port is opende.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">ROS_ERROR_STREAM</span><span class="p">(</span><span class="s">&quot;Unable to open port.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span>
+<span class="w">    </span><span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="n">argv</span><span class="p">,</span><span class="s">&quot;serial_demo&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="w"> </span><span class="n">nh</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">my_serial_init</span><span class="p">(</span><span class="s">&quot;/dev/ttyS0&quot;</span><span class="p">,</span><span class="mi">115200</span><span class="p">);</span><span class="c1">//base版是/dev/ttyS8</span>
+
+<span class="w">    </span><span class="n">ros</span><span class="o">::</span><span class="n">Rate</span><span class="w"> </span><span class="n">loop_rate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">()){</span>
+<span class="w">        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_serial</span><span class="p">.</span><span class="n">available</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std_msgs</span><span class="o">::</span><span class="n">String</span><span class="w"> </span><span class="n">msg_s</span><span class="p">;</span>
+<span class="w">            </span><span class="n">msg_s</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_serial</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">my_serial</span><span class="p">.</span><span class="n">available</span><span class="p">());</span>
+<span class="w">            </span><span class="c1">//这里是把1秒内所有接收到的数据全部打印出来</span>
+<span class="w">            </span><span class="c1">//用户可以自定根据接收到的数据进行自己的处理</span>
+<span class="w">            </span><span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;Reading from serial port:&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">msg_s</span><span class="p">.</span><span class="n">data</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello, this is viobot serial send message!&quot;</span><span class="p">;</span><span class="w"> </span>
+<span class="w">        </span><span class="n">my_serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">        </span><span class="n">loop_rate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h4>(3)效果展示<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="p">.</span><span class="n">bash</span>
+<span class="n">roslaunch</span><span class="w"> </span><span class="n">serial_demo</span><span class="w"> </span><span class="n">serial_demo</span><span class="p">.</span><span class="n">launch</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>代码实现的效果比较简单，就是单纯的每秒通过串口发送一串字符串到电脑，电脑手动发送字符串给Viobot，每秒钟打印一次。</p>
+<p><img alt="../_images/image_1S86fdDoa6.png" src="../_images/image_1S86fdDoa6.png" /></p>
+</section>
+</section>
+<section id="ros2">
+<h3>ROS2版本<a class="headerlink" href="#ros2" title="Link to this heading"></a></h3>
+<section id="id6">
+<h4>（1）安装ros-serial库<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<p>在ROS中可以直接安装官方提供的serial库，直接可用APT下载，而在ROS2中需要自行下载源码移植</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-serial-driver
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h4>（2）编译代码<a class="headerlink" href="#id7" title="Link to this heading"></a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span><span class="w"> </span><span class="n">user_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">serial_demo</span><span class="o">/</span><span class="n">extern_lib</span><span class="o">/</span><span class="n">serial</span><span class="o">/</span><span class="n">build</span>
+<span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="o">*</span>
+<span class="n">cmake</span><span class="w"> </span><span class="p">..</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">install</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">ldconfig</span>
+<span class="n">cd</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="p">..</span>
+<span class="n">colcon</span><span class="w"> </span><span class="n">build</span>
+</pre></div>
+</div>
+<p>将代码放到Viobot里面自己的工作空间里面编译，代码也比较简单，初始化一个串口对象，然后进到一个1hz的循环里面，循环里面读取串口接收数据和发送字符串。</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;serial/serial.h&quot;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Serial_node</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">Serial_node</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="o">:</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">){</span>
+<span class="w">        </span><span class="n">my_serial_init</span><span class="p">(</span><span class="s">&quot;/dev/ttyS0&quot;</span><span class="p">,</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">        </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial_node</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">timer_callback</span><span class="p">(){</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello, this is viobot serial send message!&quot;</span><span class="p">;</span><span class="w"> </span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">available</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">msg_s</span><span class="p">;</span>
+<span class="w">            </span><span class="n">msg_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">my_serial_</span><span class="p">.</span><span class="n">available</span><span class="p">());</span>
+<span class="w">            </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Reading from serial port:%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">msg_s</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">my_serial_init</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">port</span><span class="p">,</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">baudrate</span><span class="p">){</span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">setPort</span><span class="p">(</span><span class="n">port</span><span class="p">);</span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">setBaudrate</span><span class="p">(</span><span class="n">baudrate</span><span class="p">);</span>
+<span class="w">        </span><span class="n">serial</span><span class="o">::</span><span class="n">Timeout</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serial</span><span class="o">::</span><span class="n">Timeout</span><span class="o">::</span><span class="n">simpleTimeout</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">setTimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">setParity</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">parity_t</span><span class="o">::</span><span class="n">parity_none</span><span class="p">);</span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">setBytesize</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">bytesize_t</span><span class="o">::</span><span class="n">eightbits</span><span class="p">);</span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">setFlowcontrol</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">flowcontrol_t</span><span class="o">::</span><span class="n">flowcontrol_none</span><span class="p">);</span>
+<span class="w">        </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">setStopbits</span><span class="p">(</span><span class="n">serial</span><span class="o">::</span><span class="n">stopbits_t</span><span class="o">::</span><span class="n">stopbits_one</span><span class="p">);</span>
+<span class="w">        </span><span class="k">try</span><span class="p">{</span>
+<span class="w">            </span><span class="n">my_serial_</span><span class="p">.</span><span class="n">open</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">catch</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="w"> </span><span class="o">&amp;</span><span class="n">e</span><span class="p">){</span>
+<span class="w">            </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="s">&quot;Unable to open port.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">my_serial_</span><span class="p">.</span><span class="n">isOpen</span><span class="p">()){</span>
+<span class="w">            </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="s">&quot;Serial Port is opende.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="p">{</span>
+<span class="w">            </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="s">&quot;Unable to open port.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">serial</span><span class="o">::</span><span class="n">Serial</span><span class="w"> </span><span class="n">my_serial_</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">timer_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="n">argv</span><span class="p">);</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Serial_node</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;serial_demo&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h4>(3)效果展示<a class="headerlink" href="#id8" title="Link to this heading"></a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">setup</span><span class="p">.</span><span class="n">bash</span>
+<span class="n">ros2</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">serial_demo</span><span class="w"> </span><span class="n">serial_demo</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>代码实现的效果比较简单，就是单纯的每秒通过串口发送一串字符串到电脑，电脑手动发送字符串给Viobot，每秒钟打印一次。</p>
+<p><img alt="../_images/image_1S86fdDoa6.png" src="../_images/image_1S86fdDoa6.png" /></p>
+</section>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html" class="btn btn-neutral float-left" title="TF卡挂载" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="TF%E5%8D%A1%E6%8C%82%E8%BD%BD.html" class="btn btn-neutral float-left" title="Viobot的TF卡挂载" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="Viobot%E7%9A%84I2C%E4%BD%BF%E7%94%A8.html" class="btn btn-neutral float-right" title="Viobot的I2C使用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

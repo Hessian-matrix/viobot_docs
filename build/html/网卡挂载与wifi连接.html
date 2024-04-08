@@ -50,15 +50,15 @@
 <li class="toctree-l1"><a class="reference internal" href="Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html">硬件组成和接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%8B%E7%BB%8D.html">基本功能使用及介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">硬件控制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">算法控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">Viobot输出数据说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">Viobot硬件控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">Viobot算法控制</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Viobot网卡挂载与wifi连接</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">1.把驱动文件放到设备里面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2.网卡挂载</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#wifi">3.连接wifi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">一.把驱动文件放到设备里面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">二.网卡挂载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wifi">三.连接wifi</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">1）查看设备状态</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">2）搜索wifi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id5">3）连接无线热点</a></li>
@@ -67,9 +67,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#id7">6）其他</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">4.设置开机自动连接wifi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id8">四.设置开机自动连接wifi</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#systemd-service">使 systemd 开始管理这个新 service：</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">5.其他指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">五.其他指令</a></li>
 </ul>
 </li>
 </ul>
@@ -78,6 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">硬件接口使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="application/index.html">应用例子</a></li>
 </ul>
 
@@ -111,7 +112,7 @@
 <p>无线网卡驱动属于外接的驱动，需要编译系统对应的驱动文件，所以我们现在只支持少数的几个无线网卡驱动。现在以我们自己测试常用的无线来作教程说明。（本教程使用的是8818eu无线网卡）</p>
 <p><img alt="_images/84bb4f010f19ce57432588e9465ccc0_kbo9x9XVnn.jpg" src="_images/84bb4f010f19ce57432588e9465ccc0_kbo9x9XVnn.jpg" /></p>
 <section id="id1">
-<h2>1.把驱动文件放到设备里面<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>一.把驱动文件放到设备里面<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p><img alt="_images/image_oXjrz4D_A6.png" src="_images/image_oXjrz4D_A6.png" /></p>
 <p>打开了一个网络文件夹，用户：root 密码：PRR</p>
 <p><img alt="_images/image_ladX-kBj16.png" src="_images/image_ladX-kBj16.png" /></p>
@@ -121,7 +122,7 @@
 <p><img alt="_images/image_NXwC7_dHr-.png" src="_images/image_NXwC7_dHr-.png" /></p>
 </section>
 <section id="id2">
-<h2>2.网卡挂载<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>二.网卡挂载<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <p>挂载网卡：</p>
 <p>ssh进到设备里面，用户：PRR 密码：PRR</p>
 <p>基础版：</p>
@@ -134,7 +135,7 @@
 </div>
 </section>
 <section id="wifi">
-<h2>3.连接wifi<a class="headerlink" href="#wifi" title="Link to this heading"></a></h2>
+<h2>三.连接wifi<a class="headerlink" href="#wifi" title="Link to this heading"></a></h2>
 <section id="id3">
 <h3>1）查看设备状态<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>device
@@ -188,7 +189,7 @@
 </section>
 </section>
 <section id="id8">
-<h2>4.设置开机自动连接wifi<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<h2>四.设置开机自动连接wifi<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
 <p>创建一个 systemd service 文件：</p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">/etc/systemd/system/wifi-startup.service</span></code></p>
 <p>将下面的内容写入文件里面：</p>
@@ -216,7 +217,7 @@
 <p>重启设备即可</p>
 </section>
 <section id="id9">
-<h3>5.其他指令<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<h3>五.其他指令<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>connection<span class="w"> </span>delete<span class="w"> </span>my-wifi<span class="w"> </span><span class="c1">#删除已经创建的网络连接配置my-wifi</span>
 </pre></div>
 </div>

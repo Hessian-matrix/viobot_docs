@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TF卡挂载 &mdash; viobot_doc 0.0 documentation</title>
+  <title>Viobot的TF卡挂载 &mdash; viobot_doc 0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,6 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Viobot串口通信" href="Viobot%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html" />
     <link rel="prev" title="硬件接口使用" href="index.html" /> 
 </head>
 
@@ -49,15 +50,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html">硬件组成和接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%8B%E7%BB%8D.html">基本功能使用及介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">硬件控制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">算法控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">Viobot输出数据说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">Viobot硬件控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">Viobot算法控制</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%BD%91%E5%8D%A1%E6%8C%82%E8%BD%BD%E4%B8%8Ewifi%E8%BF%9E%E6%8E%A5.html">Viobot网卡挂载与wifi连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E6%95%B0%E6%8D%AE%E5%8C%85%E5%BD%95%E5%88%B6.html">Viobot数据包录制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">硬件接口使用</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">TF卡挂载</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Viobot的TF卡挂载</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tf">1.查看TF卡</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.格式化TF卡</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.挂载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4.卸载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.开机自动挂载</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="Viobot%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html">Viobot串口通信</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Viobot%E7%9A%84I2C%E4%BD%BF%E7%94%A8.html">Viobot的I2C使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Viobot%E7%9A%84CAN%E4%BD%BF%E7%94%A8.html">Viobot的CAN使用</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用例子</a></li>
 </ul>
 
         </div>
@@ -75,7 +92,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">硬件接口使用</a></li>
-      <li class="breadcrumb-item active">TF卡挂载</li>
+      <li class="breadcrumb-item active">Viobot的TF卡挂载</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/硬件接口使用/TF卡挂载.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,22 +102,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tf">
-<h1>TF卡挂载<a class="headerlink" href="#tf" title="Link to this heading"></a></h1>
+  <section id="viobottf">
+<h1>Viobot的TF卡挂载<a class="headerlink" href="#viobottf" title="Link to this heading"></a></h1>
 <p>将TF卡插到Viobot的卡槽里面，注意TF卡的存储速度。</p>
-<p>查看TF卡</p>
+<section id="tf">
+<h2>1.查看TF卡<a class="headerlink" href="#tf" title="Link to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lsblk
 </pre></div>
 </div>
-<p><img alt="../_images/image_M-uBVzKIK0.png" src="../_images/image_M-uBVzKIK0.png" /></p>
+<p><img alt="../_images/image_d4ZNuIQK0s.png" src="../_images/image_d4ZNuIQK0s.png" /></p>
 <p>可以看到新增了一个119.4G的存储块，也就是刚插进去的TF卡，名字是<code class="docutils literal notranslate"><span class="pre">mmcblk1</span></code></p>
 <p>Viobot系统不支NTFS格式的TF卡，需要存储大文件的化我们可以把TF卡格式化为EXT4格式，注意如果使用的内存卡不是空的，格式化之前，请自行备份保存好自己的文件。</p>
-<p>格式化TF卡</p>
+</section>
+<section id="id1">
+<h2>2.格式化TF卡<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>/dev/mmcblk1<span class="w"> </span>
 </pre></div>
 </div>
-<p><img alt="../_images/image_ag3O6Q-8ce.png" src="../_images/image_ag3O6Q-8ce.png" /></p>
-<p>挂载</p>
+<p><img alt="../_images/image_EIZAScmWIk.png" src="../_images/image_EIZAScmWIk.png" /></p>
+</section>
+<section id="id2">
+<h2>3.挂载<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/tfcard
 sudo<span class="w"> </span>mount<span class="w"> </span>/dev/mmcblk1<span class="w"> </span>/mnt/tfcard
 </pre></div>
@@ -109,12 +131,20 @@ sudo<span class="w"> </span>mount<span class="w"> </span>/dev/mmcblk1<span class
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>df<span class="w"> </span>-h
 </pre></div>
 </div>
-<p><img alt="../_images/image_fi3s5vAm7L.png" src="../_images/image_fi3s5vAm7L.png" /></p>
+<p><img alt="../_images/image_iaJXUroOwO.png" src="../_images/image_iaJXUroOwO.png" /></p>
 <p>可以看到/dev/mmcblk1已经被正确挂载到了/mnt/tfcard</p>
-<p>卸载</p>
+</section>
+<section id="id3">
+<h2>4.卸载<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>umount<span class="w"> </span>/dev/mmcblk1
 </pre></div>
 </div>
+</section>
+<section id="id4">
+<h2>5.开机自动挂载<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>挂载TF卡是一次性的，如果设备重启就需要重新挂载，如果需要开机挂载TF卡的话可以把先确保已经创建好了/mnt目录下的挂载文件夹，再把<code class="docutils literal notranslate"><span class="pre">mount</span> <span class="pre">/dev/mmcblk1</span> <span class="pre">/mnt/tfcard</span></code>写到<code class="docutils literal notranslate"><span class="pre">&quot;/etc/user_setup/performance.sh&quot;</span></code>文件下的最后一行里面保存退出，重启即可。</p>
+<p><img alt="../_images/image_rTjitNJof3.png" src="../_images/image_rTjitNJof3.png" /></p>
+</section>
 </section>
 
 
@@ -122,6 +152,7 @@ sudo<span class="w"> </span>mount<span class="w"> </span>/dev/mmcblk1<span class
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="硬件接口使用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Viobot%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html" class="btn btn-neutral float-right" title="Viobot串口通信" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

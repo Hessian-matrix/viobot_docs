@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="输出数据说明" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" />
+    <link rel="next" title="Viobot输出数据说明" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" />
     <link rel="prev" title="硬件组成和接口" href="%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html" /> 
 </head>
 
@@ -68,12 +68,18 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">输出数据说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">硬件控制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">算法控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html">Viobot输出数据说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A7%E5%88%B6.html">Viobot硬件控制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E6%8E%A7%E5%88%B6.html">Viobot算法控制</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9B%9E%E7%8E%AF%E4%BD%BF%E7%94%A8.html">回环使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96.html">运行效果可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%BD%91%E5%8D%A1%E6%8C%82%E8%BD%BD%E4%B8%8Ewifi%E8%BF%9E%E6%8E%A5.html">Viobot网卡挂载与wifi连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Viobot%E6%95%B0%E6%8D%AE%E5%8C%85%E5%BD%95%E5%88%B6.html">Viobot数据包录制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%97%E6%B3%95%E8%BF%90%E8%A1%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.html">Viobot算法运行基本参数配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">硬件接口使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application/index.html">应用例子</a></li>
 </ul>
 
         </div>
@@ -123,9 +129,9 @@
 <h2>2.点云<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <p><img alt="_images/image_-tdtaTY5BB.png" src="_images/image_-tdtaTY5BB.png" /></p>
 <p>  上位机有点云显示类型的选择，分别是stereo、tof和rdf三种</p>
-<p>  stereo点云是算法的原生输出点云，也就是对应的ROS话题<code class="docutils literal notranslate"><span class="pre">/pr_loop/points</span></code></p>
-<p>  rdf点云对应滤波后的点云，对应的ROS话题<code class="docutils literal notranslate"><span class="pre">/pr_loop/points_rdf</span></code> ，此功能基础版是没有的！</p>
-<p>  tof点云只有在TOF版本开启TOF传感器并且stereo2算法启动了TOF建图才会有输出，对应的ROS       话题为<code class="docutils literal notranslate"><span class="pre">/pr_loop/tof_points</span></code></p>
+<p>  stereo点云是算法的原生输出点云，也就是对应的ROS话题<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/points</span></code></p>
+<p>  rdf点云对应滤波后的点云，对应的ROS话题<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/points_rdf</span></code> ，此功能基础版是没有的！</p>
+<p>  tof点云只有在TOF版本开启TOF传感器并且stereo2算法启动了TOF建图才会有输出，对应的ROS       话题为<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/tof_points</span></code></p>
 <p>还可以设置上位机接收到的点云的显示大小，以及点云显示的范围（主要是Z轴上面的范围），当点云的Z坐标大于最高值或者小于最小值的时候，点云就不会显示在上位机界面。</p>
 </section>
 <section id="id4">
@@ -143,8 +149,8 @@
 <h3>2）算法控制<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
 <p>算法控制包含了六个按键</p>
 <p><img alt="_images/image_Ag6zKsnUQY.png" src="_images/image_Ag6zKsnUQY.png" /></p>
-<p>    启动：点击即可启动选中的算法，启动后上面的系统状态会更新到相应的状态，启动按钮会变成停                   止，点击停止即可停止算法。</p>
-<p>    重置：重置设备当前位姿，但不清除词袋信息，当设备触发词袋回环时，仍可重定位到之前词袋记               录的位姿。</p>
+<p>    启动：点击即可启动选中的算法，启动后上面的系统状态会更新到相应的状态，启动按钮会变成停止，点击停止即可停止算法。</p>
+<p>    重置：重置设备当前位姿，但不清除词袋信息，当设备触发词袋回环时，仍可重定位到之前词袋记录的位姿。</p>
 <p>    算法重启：重启整个算法，并清除之前记录并加载在算法的词袋信息，词袋会重新开始记录。
     清除轨迹：清除UI当前显示的轨迹和点云。</p>
 <p>词袋地图：加载词袋地图时，在UI上面显示关键帧位姿。</p>
@@ -167,7 +173,7 @@
 </section>
 <section id="id8">
 <h2>4.设置页面<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
-<p>点击设置页面，会弹出一个小窗口，对应五个标签栏</p>
+<p>点击设置页面，会弹出一个小窗口，对应五个标签栏。</p>
 <section id="network">
 <h3>1）network<a class="headerlink" href="#network" title="Link to this heading"></a></h3>
 <p>设置对应网络的ip、子网掩码、网关，配置后点确定，设备重启即可生效。</p>
@@ -180,9 +186,9 @@
 <p>左边补光灯和TOF的勾勾上表示设备上电启动时会自动开启补光灯/TOF，如果需要手动开启可以点击UI上面那两个独立按键。</p>
 <p>imu频率：默认200Hz，现最高支持400Hz，没有特殊需求一般不建议修改。</p>
 <p>image频率：相机帧率，基础版兼顾开销最好的是15fps，PRO版25fps。</p>
-<p>自动曝光：前面的勾勾上则开启自动曝光，根据下面设置的常规亮度来调节相机成像亮度，如果不需                  要自动曝光，则将勾去掉，单独设置下面的曝光时间。</p>
-<p>自动增益：前面的勾勾上则开启自动增益，该功能在场景特别暗的时候好用，但在一般场景下，开启                  自动增益可能会影响算法精度。</p>
-<p>曝光时间：曝光时间在去掉上面的自动曝光的勾时可设置，如果要用到这个设置，可能需要用户自行                  根据不同设置值下的成像表现来设置，属于经验值。调大图片 会变量，调小会变暗，取值                 范围：1~65535。</p>
+<p>自动曝光：前面的勾勾上则开启自动曝光，根据下面设置的常规亮度来调节相机成像亮度，如果不需要自动曝光，则将勾去掉，单独设置下面的曝光时间。</p>
+<p>自动增益：前面的勾勾上则开启自动增益，该功能在场景特别暗的时候好用，但在一般场景下，开启自动增益可能会影响算法精度。</p>
+<p>曝光时间：曝光时间在去掉上面的自动曝光的勾时可设置，如果要用到这个设置，可能需要用户自行根据不同设置值下的成像表现来设置，属于经验值。调大图片 会变量，调小会变暗，取值范围：1~65535。</p>
 <p>增益等级：自动增益勾去掉时可设置，推荐值1，如果画面太暗，效果不佳可设置为2。</p>
 <p>常规亮度：推荐室内：80~95;室外：120~135；根据画面亮度手动调节。</p>
 </section>
@@ -193,17 +199,15 @@
 <p>Z轴修正：用于修正Z轴偏差，默认关，如果Z轴偏差过大建议勾选。</p>
 <p>点云密度：pro版默认设置为16，基础版默认32。</p>
 <p>滤波参数：设置过滤点云的孤立点，单位m，建议0.15。</p>
-<p>点云最小深度：0.1以内的点深度准确性变低，不建议设置更小的值，往大了设可以屏蔽一些特别近的噪</p>
-<p>                       点，单位（m）</p>
+<p>点云最小深度：0.1以内的点深度准确性变低，不建议设置更小的值，往大了设可以屏蔽一些特别近的噪点，单位（m）</p>
 <p>点云最大深度：深度管理的最大半径，室外大场景可以设置为100.默认室内20~35即可。</p>
 </section>
 <section id="loop">
 <h3>4）loop<a class="headerlink" href="#loop" title="Link to this heading"></a></h3>
 <p><img alt="_images/image_aZgfOPeFm4.png" src="_images/image_aZgfOPeFm4.png" /></p>
 <p>加载词袋地图：在使用历史词袋地图时，勾选会自动加载下面路径下的词袋地图。</p>
-<p>保存关键帧图片：勾选则会保存所有关键帧的图片到下面那个路径下，一般不勾选，因为会占用太多磁</p>
-<p>                          盘空间。</p>
-<p>添加关键帧：设置添加关键帧的方式：手动/自动；设置为手动，在没有手动添加关键帧时，可以屏蔽掉                     回环的影响。</p>
+<p>保存关键帧图片：勾选则会保存所有关键帧的图片到下面那个路径下，一般不勾选，因为会占用太多磁盘空间。</p>
+<p>添加关键帧：设置添加关键帧的方式：手动/自动；设置为手动，在没有手动添加关键帧时，可以屏蔽掉回环的影响。</p>
 <p>保存词袋地图的路径：设置保存词袋地图的路径。注意：该路径是在设备上的。</p>
 </section>
 <section id="version">
@@ -219,7 +223,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%92%8C%E6%8E%A5%E5%8F%A3.html" class="btn btn-neutral float-left" title="硬件组成和接口" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" class="btn btn-neutral float-right" title="输出数据说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E.html" class="btn btn-neutral float-right" title="Viobot输出数据说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
