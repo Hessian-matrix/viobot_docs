@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viobot网卡挂载与wifi连接 &mdash; viobot_doc 0.0 documentation</title>
+  <title>网卡挂载与连接wifi &mdash; viobot_doc 0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -65,7 +65,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Viobot网卡挂载与wifi连接</li>
+      <li class="breadcrumb-item active">网卡挂载与连接wifi</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/硬件接口使用/网卡挂载与wifi连接.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -75,23 +75,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="viobotwifi">
-<h1>Viobot网卡挂载与wifi连接<a class="headerlink" href="#viobotwifi" title="Link to this heading"></a></h1>
-<p>Viobot设备本身不具备无线功能，我们其实更推荐使用有线连接的方式使用，这样会更稳定，但如果确实想要使用无线测试的话，我们提供了无线网卡的驱动和安装方式。</p>
-<p>无线网卡驱动属于外接的驱动，需要编译系统对应的驱动文件，所以我们现在只支持少数的几个无线网卡驱动。现在以我们自己测试常用的无线来作教程说明。（本教程使用的是8818eu无线网卡）</p>
-<p><img alt="硬件接口使用/image/84bb4f010f19ce57432588e9465ccc0_kbo9x9XVnn.jpg" src="硬件接口使用/image/84bb4f010f19ce57432588e9465ccc0_kbo9x9XVnn.jpg" /></p>
+  <section id="wifi">
+<h1>网卡挂载与连接wifi<a class="headerlink" href="#wifi" title="Link to this heading"></a></h1>
 <section id="id1">
-<h2>一.把驱动文件放到设备里面<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<p><img alt="硬件接口使用/image/image_oXjrz4D_A6.png" src="硬件接口使用/image/image_oXjrz4D_A6.png" /></p>
+<h2>1.把驱动文件放到设备里面<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><img alt="../_images/image_j7dg2IqoqH.png" src="../_images/image_j7dg2IqoqH.png" /></p>
 <p>打开了一个网络文件夹，用户：root 密码：PRR</p>
-<p><img alt="硬件接口使用/image/image_ladX-kBj16.png" src="硬件接口使用/image/image_ladX-kBj16.png" /></p>
+<p><img alt="../_images/image_CA0ho5aTbM.png" src="../_images/image_CA0ho5aTbM.png" /></p>
 <p>查看samba文件夹里面是否有module文件夹，如果没有则新建</p>
-<p><img alt="硬件接口使用/image/image_5v-FPLPcpS.png" src="硬件接口使用/image/image_5v-FPLPcpS.png" /></p>
+<p><img alt="../_images/image_IFwTbWYHh0.png" src="../_images/image_IFwTbWYHh0.png" /></p>
 <p>把8188eu.ko文件拉到module文件夹下（pro版对应文件是pro-8188eu.ko）</p>
-<p><img alt="硬件接口使用/image/image_NXwC7_dHr-.png" src="硬件接口使用/image/image_NXwC7_dHr-.png" /></p>
+<p><img alt="../_images/image_8aEbwfO1cI.png" src="../_images/image_8aEbwfO1cI.png" /></p>
 </section>
 <section id="id2">
-<h2>二.网卡挂载<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>2.网卡挂载<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <p>挂载网卡：</p>
 <p>ssh进到设备里面，用户：PRR 密码：PRR</p>
 <p>基础版：</p>
@@ -103,44 +100,44 @@
 </pre></div>
 </div>
 </section>
-<section id="wifi">
-<h2>三.连接wifi<a class="headerlink" href="#wifi" title="Link to this heading"></a></h2>
 <section id="id3">
-<h3>1）查看设备状态<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<h2>3.连接wifi<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>1）查看设备状态<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>device
 </pre></div>
 </div>
-<p><img alt="硬件接口使用/image/image_c5D1upiaxA.png" src="硬件接口使用/image/image_c5D1upiaxA.png" /></p>
+<p><img alt="../_images/image_WVlBBoRWsP.png" src="../_images/image_WVlBBoRWsP.png" /></p>
 <p>这里的网卡名称为<code class="docutils literal notranslate"><span class="pre">wlx70f11c4b16f7</span></code></p>
 </section>
-<section id="id4">
-<h3>2）搜索wifi<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="id5">
+<h3>2）搜索wifi<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>list<span class="w"> </span><span class="c1">#会出来可见的WIFI列表</span>
 </pre></div>
 </div>
-<p><img alt="硬件接口使用/image/image_QWq_HLfMaF.png" src="硬件接口使用/image/image_QWq_HLfMaF.png" /></p>
+<p><img alt="../_images/image_0J9dY08wbd.png" src="../_images/image_0J9dY08wbd.png" /></p>
 </section>
-<section id="id5">
-<h3>3）连接无线热点<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span><span class="s2">&quot;PRROBOT&quot;</span><span class="w"> </span>password<span class="w"> </span><span class="s2">&quot;pr16171618&quot;</span><span class="w"> </span><span class="c1">#PRROBOT对应你的SSID,12345678对应你的密码</span>
+<section id="id6">
+<h3>3）连接无线热点<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span><span class="s2">&quot;PRROBOT&quot;</span><span class="w"> </span>password<span class="w"> </span><span class="s2">&quot;12345678&quot;</span><span class="w"> </span><span class="c1">#PRROBOT对应你的SSID,12345678对应你的密码</span>
 </pre></div>
 </div>
 </section>
-<section id="id6">
-<h3>4）查看连接状态<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<section id="id7">
+<h3>4）查看连接状态<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>connection<span class="w"> </span>show
 </pre></div>
 </div>
-<p><img alt="硬件接口使用/image/image_hwS6xwON17.png" src="硬件接口使用/image/image_hwS6xwON17.png" /></p>
+<p><img alt="../_images/image_5Qe-L07qCr.png" src="../_images/image_5Qe-L07qCr.png" /></p>
 </section>
 <section id="ip">
 <h3>5）查看当前网络IP<a class="headerlink" href="#ip" title="Link to this heading"></a></h3>
 <p>输入<code class="docutils literal notranslate"><span class="pre">ifconfig</span></code>查看当前连接的ip</p>
-<p><img alt="硬件接口使用/image/image_Qvpe-hW6D5.png" src="硬件接口使用/image/image_Qvpe-hW6D5.png" /></p>
+<p><img alt="../_images/image_7xEgYMFuq1.png" src="../_images/image_7xEgYMFuq1.png" /></p>
 <p>用自己的电脑ping一下wifi的ip测试是否能用，需注意网段。</p>
 </section>
-<section id="id7">
-<h3>6）其他<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<section id="id8">
+<h3>6）其他<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
 <p>这个方式直接连接wifi的IP是自动分配的，如果需要设置静态IP：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>connection<span class="w"> </span>modify<span class="w"> </span>PRROBOT<span class="w"> </span>ipv4.addresses<span class="w"> </span><span class="s1">&#39;10.21.10.16/24&#39;</span><span class="w"> </span>ipv4.gateway<span class="w"> </span><span class="s1">&#39;10.21.10.1&#39;</span><span class="w"> </span>ipv4.dns<span class="w"> </span><span class="s1">&#39;8.8.8.8&#39;</span><span class="w"> </span>ipv4.method<span class="w"> </span>manual
 </pre></div>
@@ -157,8 +154,8 @@
 <p>再重新用ifconfig查看ip即可</p>
 </section>
 </section>
-<section id="id8">
-<h2>四.设置开机自动连接wifi<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<section id="id9">
+<h2>4.设置开机自动连接wifi<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
 <p>创建一个 systemd service 文件：</p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">/etc/systemd/system/wifi-startup.service</span></code></p>
 <p>将下面的内容写入文件里面：</p>
@@ -177,24 +174,12 @@
 <span class="nv">WantedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>multi-user.target
 </pre></div>
 </div>
-<p>  pro版本将<code class="docutils literal notranslate"><span class="pre">ExecStart</span> <span class="pre">=</span> <span class="pre">insmod</span> <span class="pre">/home/PRR/Viobot/module/8188eu.ko</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">ExecStart</span> <span class="pre">=</span> <span class="pre">insmod</span> <span class="pre">/home/PRR/Viobot/module/pro-8188eu.ko</span></code></p>
-<section id="systemd-service">
-<h3>使 systemd 开始管理这个新 service：<a class="headerlink" href="#systemd-service" title="Link to this heading"></a></h3>
+<p>  pro版本将<code class="docutils literal notranslate"><span class="pre">ExecStart</span> <span class="pre">=</span> <span class="pre">insmod</span> <span class="pre">/home/PRR/Viobot/module/pro-8188eu.ko</span></code> 替换为 <code class="docutils literal notranslate"> <span class="pre">ExecStart</span> <span class="pre">=</span> <span class="pre">insmod</span> <span class="pre">/home/PRR/Viobot/module/8188eu.ko</span></code></p>
+<p>使 systemd 开始管理这个新 service：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>wifi-startup.service
 </pre></div>
 </div>
 <p>重启设备即可</p>
-</section>
-<section id="id9">
-<h3>五.其他指令<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>connection<span class="w"> </span>delete<span class="w"> </span>my-wifi<span class="w"> </span><span class="c1">#删除已经创建的网络连接配置my-wifi</span>
-</pre></div>
-</div>
-<p>改名</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>connection<span class="w"> </span>modify<span class="w"> </span><span class="s2">&quot;Wired connection 1&quot;</span><span class="w"> </span>connection.id<span class="w"> </span><span class="s2">&quot;wired1&quot;</span>
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 

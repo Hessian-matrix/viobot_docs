@@ -12,9 +12,10 @@ Welcome to viobot_doc's documentation!
 
    Viobot简介
    Viobot开机指南
-       基本功能介绍及使用/index
-   ROS_Master/index
-       硬件接口使用/index
+   
+   基本功能介绍及使用/index
+   硬件接口使用/index
+   ROS_Master/index    
    SDK测试例程/index
    application/index  
    
