@@ -38,11 +38,11 @@ export ROS_MASTER_URI=http://10.21.0.225:11311
 rostopic list
 #配置好了则会列出主机的话题列表
 #还可以直接输入
-rostopic echo /imu
+rostopic echo /viobot/imu
 #终端会打印imu的数据
 ```
 
-![](image/image_MmCXz-AbBY.png)
+![image-20240408100846378](image/image-20240408100846378.png)
 
 到这里从机就配置完成了。
 
@@ -86,7 +86,7 @@ rqt #从机开启rqt，调出Message Publisher
 
 ![](image/image_2AHFcQN2My.png)
 
-选择Topic ：`/system_ctrl `      Type: `system_ctrl/viobot_ctrl` 点击加号添加。
+选择Topic ：`/viobot/system_ctrl `      Type: `system_ctrl/viobot_ctrl` 点击加号添加。
 
 话题勾选两个勾，rqt就会按照1Hz的频率发布开启补光灯的话题，发几次就去掉上面/system\_ctrl前面的勾就行。如果看到补光灯亮起来了，就表示从机控制主机配置完成了。
 
