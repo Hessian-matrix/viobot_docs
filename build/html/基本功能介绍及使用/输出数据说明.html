@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ch" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viobot输出数据说明 &mdash; viobot_doc 0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d97f9d14"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            viobot_doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E7%AE%80%E4%BB%8B.html">Viobot简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">SDK_Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">viobot_doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Viobot输出数据说明</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/基本功能介绍及使用/输出数据说明.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viobot">
+<h1>Viobot输出数据说明<a class="headerlink" href="#viobot" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>一.原始数据<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="ros">
+<h3>1.ROS话题<a class="headerlink" href="#ros" title="Link to this heading"></a></h3>
+<section id="id2">
+<h4>1)相机原始图像数据<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::Image</span></code></p>
+<p>Topic: 左目：<code class="docutils literal notranslate"><span class="pre">/viobot/image_left</span></code>  右目：<code class="docutils literal notranslate"><span class="pre">/viobot/image_right</span></code></p>
+</section>
+<section id="imu">
+<h4>2）imu数据<a class="headerlink" href="#imu" title="Link to this heading"></a></h4>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::Imu</span></code></p>
+<p>Topic: <code class="docutils literal notranslate"><span class="pre">/viobot/imu</span></code></p>
+</section>
+<section id="tof">
+<h4>3）TOF数据<a class="headerlink" href="#tof" title="Link to this heading"></a></h4>
+<p>点云数据：</p>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::PointCloud2</span></code></p>
+<p>Topic: <code class="docutils literal notranslate"><span class="pre">/viobot/tof_cloud</span></code></p>
+<p>(x,y,z)</p>
+<p>深度图：</p>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::Image</span></code></p>
+<p>Topic: <code class="docutils literal notranslate"><span class="pre">/viobot/depth_image</span></code></p>
+<p>幅度图：</p>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::Image</span></code></p>
+<p>Topic: <code class="docutils literal notranslate"><span class="pre">/viobot/amp_image</span></code></p>
+</section>
+<section id="id3">
+<h4>4）系统状态<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<p>#此项为自定义的ros msg,可以在SDK例程里面找到</p>
+<p>Type: system_ctrl::viobot_ctrl</p>
+<p>Topic: /viobot/sys_status</p>
+</section>
+</section>
+<section id="http">
+<h3>2.http输出<a class="headerlink" href="#http" title="Link to this heading"></a></h3>
+<p><img alt="../_images/image_MDAo1dKRXX.png" src="../_images/image_MDAo1dKRXX.png" /></p>
+</section>
+</section>
+<section id="id4">
+<h2>二.算法输出<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<section id="id5">
+<h3>1.位姿<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>开启stereo2算法后，双目自动完成初始化，直接输出位姿。对应上位机的相机框。</p>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">nav_msgs::Odometry</span></code></p>
+<p>Topic:<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/odometry_rect</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Odometry</span></code>是包含了位姿(pose)和速度(twist)的.</p>
+</section>
+<section id="id6">
+<h3>2.点云<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<p>点云需要开启stereo2算法后才有输出。</p>
+<p><img alt="../_images/image_RhGwnJJG7F.png" src="../_images/image_RhGwnJJG7F.png" /></p>
+<p>如UI所示的，stereo2输出的点云有三种——stereo2原生点云，RDF点云，以及TOF点云（TOF版本）。</p>
+<p><img alt="../_images/image_XDUr_uzsKN.png" src="../_images/image_XDUr_uzsKN.png" /></p>
+<p>需要注意的是所有点云发送的话题都是实时的，只有用户自己保存每一帧才有历史点云的说法，上位机显示的是所连接设备发上来的所有点云，点云的坐标系是紧跟着以算法开机初始化后的第一个位姿为原点的“世界”系坐标下的。</p>
+</section>
+<section id="stereo2">
+<h3>（1）stereo2点云<a class="headerlink" href="#stereo2" title="Link to this heading"></a></h3>
+<p>这是直接法直接输出的点云，是根据图片的梯度点计算出来的点深度的集合，所以单帧是成一个散射状态的，这跟摄像头的成像原理有关，当相机运动起来之后，上位机记录的点云多了，才会慢慢的建出一定的形状出来。</p>
+<p><img alt="../_images/image_iyk0-M018A.png" src="../_images/image_iyk0-M018A.png" /></p>
+<p>此点云的ROS话题为：Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::PointCloud2</span></code> Topic:<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/points</span></code></p>
+<p>注意：点云生成是在产生新的关键帧的时候，所以点云的发布频率是不固定的，它的发布频率跟位姿发布频率是一致的。</p>
+</section>
+<section id="rdf">
+<h3>（2）RDF点云<a class="headerlink" href="#rdf" title="Link to this heading"></a></h3>
+<p>这是根据stereo2点云经过滤波和补点（增加稠密度）产出的，它的杂点更少，相对于stereo2点云也更加稠密，相对直观，可用于实时避障。</p>
+<p><img alt="../_images/image_u04WAJRCss.png" src="../_images/image_u04WAJRCss.png" /></p>
+<p>此点云的ROS话题为：Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::PointCloud2</span></code> Topic:<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/points_rdf</span></code></p>
+</section>
+<section id="tof-tof">
+<h3>（3）TOF融合点云（TOF版）<a class="headerlink" href="#tof-tof" title="Link to this heading"></a></h3>
+<p>需要开启TOF。</p>
+<p>这是TOF相机数据降采样并融合了相机位姿后的点云，并非TOF的原始点云，可直接用于避障。</p>
+<p><img alt="../_images/image_zvKTLIcjbC.png" src="../_images/image_zvKTLIcjbC.png" /></p>
+<p>此点云的ROS话题为：Type: <code class="docutils literal notranslate"><span class="pre">sensor_msgs::PointCloud2</span></code> Topic:<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/tof_points</span></code></p>
+<p>发布频率同样是与位姿发布频率一致。</p>
+</section>
+<section id="id7">
+<h3>（4）其他点云<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<p>开启算法之后用户可以看到加了一个<code class="docutils literal notranslate"><span class="pre">_adjusted</span></code>后缀的点云</p>
+<p><code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/points_adjusted</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/tof_points_adjusted</span></code></p>
+<p>这两组是后续建全局先验全局地图使用的，后续教程会慢慢讲解。</p>
+</section>
+</section>
+<section id="id8">
+<h2>三.参数数据<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<section id="id9">
+<h3>1.相机内参<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<section id="id10">
+<h4>1）ROS话题<a class="headerlink" href="#id10" title="Link to this heading"></a></h4>
+<p>Type:<code class="docutils literal notranslate"><span class="pre">sensor_msgs::CameraInfo</span></code>
+Topic: 左目内参：<code class="docutils literal notranslate"><span class="pre">/viobot/camera_left_info</span> </code> 右目内参：<code class="docutils literal notranslate"><span class="pre">/viobot/camera_right_info</span></code> tof内参：<code class="docutils literal notranslate"><span class="pre">/viobot/tof_info</span></code></p>
+</section>
+<section id="id11">
+<h4>2）http<a class="headerlink" href="#id11" title="Link to this heading"></a></h4>
+<p><img alt="../_images/image_tL8QskSjNg.png" src="../_images/image_tL8QskSjNg.png" /></p>
+</section>
+</section>
+<section id="id12">
+<h3>2.imu内参<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<p>文件地址：&quot;/home/PRR/Viobot/install/share/viobot/cali/imu/imu.yaml&quot;</p>
+<p>或者使用http获取</p>
+<p><img alt="../_images/image__qNzy-7uNR.png" src="../_images/image__qNzy-7uNR.png" /></p>
+</section>
+<section id="id13">
+<h3>3.外参文件<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<p>这两个外参文件暂时没有程序获取接口，可以直接访问文件获取。</p>
+<p>imu到左目外参文件地址：&quot;/home/PRR/Viobot/install/share/viobot/cali/extrinsic/imu_cam.yaml&quot;</p>
+<p>tof到左目外参文件地址：&quot;/home/PRR/Viobot/install/share/viobot/cali/tof/tof_cam.yaml&quot;</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, hession.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

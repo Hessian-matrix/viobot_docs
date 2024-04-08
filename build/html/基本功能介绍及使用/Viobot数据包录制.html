@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ch" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viobot数据包录制 &mdash; viobot_doc 0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d97f9d14"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            viobot_doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E7%AE%80%E4%BB%8B.html">Viobot简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">SDK_Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">viobot_doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Viobot数据包录制</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/基本功能介绍及使用/Viobot数据包录制.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viobot">
+<h1>Viobot数据包录制<a class="headerlink" href="#viobot" title="Link to this heading"></a></h1>
+<p>Viobot里面是一个完整的ubuntu系统，无论是20.04还是22.04都支持完整的ROS的功能，所以可以通过ROS来录制数据包，用于现象记录或者是算法的参数调节。</p>
+<p>需要注意的是，数据包可能会很大，设备自身的存储空间有限，需要外接高速内存卡。内存卡的写入速度至少在25M/S以上。</p>
+<p>1.用于记录运行过程和现象</p>
+<p>这个我们只需要录制开启了stereo2算法后的输出就可以了。</p>
+<p>主要需要的话题就是<code class="docutils literal notranslate"><span class="pre">/viobot/stereo2/feature_img</span></code>和 <code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/odometry_rect</span></code>，这两个话题分别是算法运行过程中提取了特征点并将双目图像合成后的图，可以看到算法在运行过程中的提点表现，其实也是对应上位机视频流输出的视频；另外一个话题是算法运行过程中设备相对于它初始位置的位姿变化，即设备运行过程的位姿，对应上位机上面的相机框的运动。</p>
+<p>录包命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosbag<span class="w"> </span>record<span class="w"> </span>/viobot/stereo2/feature_img<span class="w"> </span>/viobot/pr_loop/odometry_rect<span class="w"> </span>-o<span class="w"> </span>/mnt/tfcard/run_record.bag
+</pre></div>
+</div>
+<p>其中/mnt/sd_card/run_record.bag是所存的数据包的路径+名字，如果不在前面加路径就会录在你当前终端所在的路径，-o会自动给你所取名字增加一个时间在前面，方便区分不同时候录的包。</p>
+<p>2.录制运行过程的原始传感器数据</p>
+<p>录制了原始的传感器数据，可以通过SDK的for_bag标志可以关掉设备原本的传感器数据读取，从而将数据包的数据作为算法的输入源来运行算法，可以用于算法的调参。</p>
+<p>主要的话题包括<code class="docutils literal notranslate"><span class="pre">/viobot/image_left</span> </code>、<code class="docutils literal notranslate"><span class="pre">/viobot/image_right</span></code> 、<code class="docutils literal notranslate"><span class="pre">/viobot/camera_left_info</span></code> 、<code class="docutils literal notranslate"><span class="pre">/viobot/camera_right_info</span></code>、<code class="docutils literal notranslate"><span class="pre">/viobot/imu</span></code>  如果是TOF版本需要开启TOF的话可以加一个话题<code class="docutils literal notranslate"><span class="pre">/viobot/tof_cloud</span></code></p>
+<p>录包命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosbag<span class="w"> </span>record<span class="w"> </span>/viobot/image_left<span class="w"> </span>/viobot/image_right<span class="w"> </span>/viobot/camera_left_info<span class="w"> </span>/viobot/camera_right_info<span class="w"> </span>/viobot/imu<span class="w"> </span>-o<span class="w"> </span>/mnt/tfcard/raw_record.bag
+</pre></div>
+</div>
+<p>其中/mnt/sd_card/raw_record.bag是所存的数据包的路径+名字，如果不在前面加路径就会录在你当前终端所在的路径，-o会自动给你所取名字增加一个时间在前面，方便区分不同时候录的包。</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, hession.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

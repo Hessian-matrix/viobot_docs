@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ch" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viobot算法运行基本参数配置 &mdash; viobot_doc 0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d97f9d14"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            viobot_doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E7%AE%80%E4%BB%8B.html">Viobot简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">SDK_Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">viobot_doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Viobot算法运行基本参数配置</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/基本功能介绍及使用/算法运行基本参数配置.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viobot">
+<h1>Viobot算法运行基本参数配置<a class="headerlink" href="#viobot" title="Link to this heading"></a></h1>
+<p>设备出厂默认设置都是室内的运行参数，基本能够保证在室内场景下运行良好并有一个比较不错的精度表现。一般来说我们修改设置都是修改相机的曝光相关的，以及算法的深度相关参数，建议修改的数据是常规亮度和点云最大深度。</p>
+<section id="id1">
+<h2>一.室内配置<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>如果室内场景灯光比较亮，或者是窗户比较多，通光比较好的话，可以将常规亮度设置为90~95，其他条件下基本设置成下面这样就行。</p>
+<p><img alt="../_images/image_livMVCAeZp.png" src="../_images/image_livMVCAeZp.png" /></p>
+<p><img alt="../_images/image_u8SfIlvkHk.png" src="../_images/image_u8SfIlvkHk.png" /></p>
+<p>这里说明一下Z轴修正开关，这是一个Z轴漂移补偿的开关，当运行环境比较平整，没有太大的上下坡度的时候可以开启，开启后算法会将Z轴的漂移量跟xy的平移量做整合，得到一个没有Z轴漂移的位姿。</p>
+</section>
+<section id="id2">
+<h2>二.室外配置<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>室外一般亮度本身会比室内高一些，我们可以把常规亮度设置的相对高一些，可以参考下面的配置</p>
+<p><img alt="../_images/image_FyfyoPGHxu.png" src="../_images/image_FyfyoPGHxu.png" /></p>
+<p><img alt="../_images/image_SeshZc2KQP.png" src="../_images/image_SeshZc2KQP.png" /></p>
+<p>点云最大深度可以看场景的开阔程度，如果30~50米内基本都有比较高的参照物时，可以设置为100~150，当场景特别开阔可以设置到200以上。</p>
+</section>
+<section id="id3">
+<h2>三.其他场景配置<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>其他一些场景下还需要用户看一下设备算法的基本运行情况，做出相应的修改，如果是亮度特别低的场景，建议开启补光灯或者自己增加一个补光灯设备，使得设备有一个比较清晰的成像。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, hession.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

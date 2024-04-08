@@ -12,18 +12,9 @@ Welcome to viobot_doc's documentation!
 
    Viobot简介
    Viobot开机指南
-   硬件组成和接口
-   基本功能使用和介绍
-   输出数据说明
-   硬件控制
-   算法控制
-   回环使用
-   运行效果可视化
-   网卡挂载与wifi连接
-   Viobot数据包录制
-   算法运行基本参数配置
+       基本功能介绍及使用/index
    ROS_Master/index
-   硬件接口使用/index
+       硬件接口使用/index
    SDK测试例程/index
    application/index  
    

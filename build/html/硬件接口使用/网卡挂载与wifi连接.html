@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ch" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viobot网卡挂载与wifi连接 &mdash; viobot_doc 0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d97f9d14"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            viobot_doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E7%AE%80%E4%BB%8B.html">Viobot简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">SDK_Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">viobot_doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Viobot网卡挂载与wifi连接</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/硬件接口使用/网卡挂载与wifi连接.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viobotwifi">
+<h1>Viobot网卡挂载与wifi连接<a class="headerlink" href="#viobotwifi" title="Link to this heading"></a></h1>
+<p>Viobot设备本身不具备无线功能，我们其实更推荐使用有线连接的方式使用，这样会更稳定，但如果确实想要使用无线测试的话，我们提供了无线网卡的驱动和安装方式。</p>
+<p>无线网卡驱动属于外接的驱动，需要编译系统对应的驱动文件，所以我们现在只支持少数的几个无线网卡驱动。现在以我们自己测试常用的无线来作教程说明。（本教程使用的是8818eu无线网卡）</p>
+<p><img alt="硬件接口使用/image/84bb4f010f19ce57432588e9465ccc0_kbo9x9XVnn.jpg" src="硬件接口使用/image/84bb4f010f19ce57432588e9465ccc0_kbo9x9XVnn.jpg" /></p>
+<section id="id1">
+<h2>一.把驱动文件放到设备里面<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><img alt="硬件接口使用/image/image_oXjrz4D_A6.png" src="硬件接口使用/image/image_oXjrz4D_A6.png" /></p>
+<p>打开了一个网络文件夹，用户：root 密码：PRR</p>
+<p><img alt="硬件接口使用/image/image_ladX-kBj16.png" src="硬件接口使用/image/image_ladX-kBj16.png" /></p>
+<p>查看samba文件夹里面是否有module文件夹，如果没有则新建</p>
+<p><img alt="硬件接口使用/image/image_5v-FPLPcpS.png" src="硬件接口使用/image/image_5v-FPLPcpS.png" /></p>
+<p>把8188eu.ko文件拉到module文件夹下（pro版对应文件是pro-8188eu.ko）</p>
+<p><img alt="硬件接口使用/image/image_NXwC7_dHr-.png" src="硬件接口使用/image/image_NXwC7_dHr-.png" /></p>
+</section>
+<section id="id2">
+<h2>二.网卡挂载<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>挂载网卡：</p>
+<p>ssh进到设备里面，用户：PRR 密码：PRR</p>
+<p>基础版：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>insmod<span class="w"> </span>/home/PRR/Viobot/module/8188eu.ko<span class="w">    </span><span class="c1">#基础版</span>
+</pre></div>
+</div>
+<p>pro版：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>insmod<span class="w"> </span>/home/PRR/Viobot/module/pro-8188eu.ko<span class="w"> </span><span class="c1">#pro版</span>
+</pre></div>
+</div>
+</section>
+<section id="wifi">
+<h2>三.连接wifi<a class="headerlink" href="#wifi" title="Link to this heading"></a></h2>
+<section id="id3">
+<h3>1）查看设备状态<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>device
+</pre></div>
+</div>
+<p><img alt="硬件接口使用/image/image_c5D1upiaxA.png" src="硬件接口使用/image/image_c5D1upiaxA.png" /></p>
+<p>这里的网卡名称为<code class="docutils literal notranslate"><span class="pre">wlx70f11c4b16f7</span></code></p>
+</section>
+<section id="id4">
+<h3>2）搜索wifi<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>list<span class="w"> </span><span class="c1">#会出来可见的WIFI列表</span>
+</pre></div>
+</div>
+<p><img alt="硬件接口使用/image/image_QWq_HLfMaF.png" src="硬件接口使用/image/image_QWq_HLfMaF.png" /></p>
+</section>
+<section id="id5">
+<h3>3）连接无线热点<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span><span class="s2">&quot;PRROBOT&quot;</span><span class="w"> </span>password<span class="w"> </span><span class="s2">&quot;pr16171618&quot;</span><span class="w"> </span><span class="c1">#PRROBOT对应你的SSID,12345678对应你的密码</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>4）查看连接状态<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>connection<span class="w"> </span>show
+</pre></div>
+</div>
+<p><img alt="硬件接口使用/image/image_hwS6xwON17.png" src="硬件接口使用/image/image_hwS6xwON17.png" /></p>
+</section>
+<section id="ip">
+<h3>5）查看当前网络IP<a class="headerlink" href="#ip" title="Link to this heading"></a></h3>
+<p>输入<code class="docutils literal notranslate"><span class="pre">ifconfig</span></code>查看当前连接的ip</p>
+<p><img alt="硬件接口使用/image/image_Qvpe-hW6D5.png" src="硬件接口使用/image/image_Qvpe-hW6D5.png" /></p>
+<p>用自己的电脑ping一下wifi的ip测试是否能用，需注意网段。</p>
+</section>
+<section id="id7">
+<h3>6）其他<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<p>这个方式直接连接wifi的IP是自动分配的，如果需要设置静态IP：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>connection<span class="w"> </span>modify<span class="w"> </span>PRROBOT<span class="w"> </span>ipv4.addresses<span class="w"> </span><span class="s1">&#39;10.21.10.16/24&#39;</span><span class="w"> </span>ipv4.gateway<span class="w"> </span><span class="s1">&#39;10.21.10.1&#39;</span><span class="w"> </span>ipv4.dns<span class="w"> </span><span class="s1">&#39;8.8.8.8&#39;</span><span class="w"> </span>ipv4.method<span class="w"> </span>manual
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">PRROBOT</span></code>对应<code class="docutils literal notranslate"><span class="pre">nmcli</span> <span class="pre">connection</span> <span class="pre">show</span></code>显示的<code class="docutils literal notranslate"><span class="pre">name</span></code>，ip : <code class="docutils literal notranslate"><span class="pre">10.21.10.16</span></code> ，掩码需要换算一下：<code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code>对应<code class="docutils literal notranslate"><span class="pre">24</span></code> ，网关：<code class="docutils literal notranslate"><span class="pre">10.21.10.1</span></code>，DNS：<code class="docutils literal notranslate"><span class="pre">8.8.8.8</span></code>  注意：静态IP需要保证你设置的IP不会与别的设备冲突。</p>
+<p>如果要重新设置为自动获取IP：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>connection<span class="w"> </span>modify<span class="w"> </span>PRROBOT<span class="w">  </span>ipv4.method<span class="w"> </span>auto<span class="w"> </span>
+</pre></div>
+</div>
+<p>设置完之后需要重新连接一下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>connection<span class="w"> </span>up<span class="w"> </span>PRROBOT<span class="w">  </span>
+</pre></div>
+</div>
+<p>再重新用ifconfig查看ip即可</p>
+</section>
+</section>
+<section id="id8">
+<h2>四.设置开机自动连接wifi<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<p>创建一个 systemd service 文件：</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">/etc/systemd/system/wifi-startup.service</span></code></p>
+<p>将下面的内容写入文件里面：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>Start<span class="w"> </span>wifi
+<span class="nv">After</span><span class="o">=</span>network.target<span class="w"> </span>NetworkManager.service
+<span class="nv">Requires</span><span class="o">=</span>NetworkManager.service
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>simple
+<span class="nv">User</span><span class="o">=</span>root
+<span class="nv">Group</span><span class="o">=</span>root
+<span class="nv">ExecStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>insmod<span class="w"> </span>/home/PRR/Viobot/module/8188eu.ko
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>multi-user.target
+</pre></div>
+</div>
+<p>  pro版本将<code class="docutils literal notranslate"><span class="pre">ExecStart</span> <span class="pre">=</span> <span class="pre">insmod</span> <span class="pre">/home/PRR/Viobot/module/8188eu.ko</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">ExecStart</span> <span class="pre">=</span> <span class="pre">insmod</span> <span class="pre">/home/PRR/Viobot/module/pro-8188eu.ko</span></code></p>
+<section id="systemd-service">
+<h3>使 systemd 开始管理这个新 service：<a class="headerlink" href="#systemd-service" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>wifi-startup.service
+</pre></div>
+</div>
+<p>重启设备即可</p>
+</section>
+<section id="id9">
+<h3>五.其他指令<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>connection<span class="w"> </span>delete<span class="w"> </span>my-wifi<span class="w"> </span><span class="c1">#删除已经创建的网络连接配置my-wifi</span>
+</pre></div>
+</div>
+<p>改名</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli<span class="w"> </span>connection<span class="w"> </span>modify<span class="w"> </span><span class="s2">&quot;Wired connection 1&quot;</span><span class="w"> </span>connection.id<span class="w"> </span><span class="s2">&quot;wired1&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, hession.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

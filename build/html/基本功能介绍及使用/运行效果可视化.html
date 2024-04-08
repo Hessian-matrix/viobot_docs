@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ch" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>运行效果可视化 &mdash; viobot_doc 0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d97f9d14"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            viobot_doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E7%AE%80%E4%BB%8B.html">Viobot简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Viobot%E5%BC%80%E6%9C%BA%E6%8C%87%E5%8D%97.html">Viobot开机指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS_Master/index.html">ROS主从机配置的两种方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SDK%E6%B5%8B%E8%AF%95%E4%BE%8B%E7%A8%8B/index.html">SDK_Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">应用Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">viobot_doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">运行效果可视化</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/基本功能介绍及使用/运行效果可视化.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>运行效果可视化<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>本篇介绍一下如何将viobot运行算法的结果可视化出来。</p>
+<section id="windows">
+<h2>1.windows端<a class="headerlink" href="#windows" title="Link to this heading"></a></h2>
+<p>在windows端我们做了一个上位机软件用于效果的显示，当然这个是一个基本展示和操作界面，没有什么特别深刻的东西在里面，其实就是对于算法输出的一些话题再通过网络发送到上位机进行效果展示而已。</p>
+<p><img alt="../_images/image_ootFx-Ly8n.png" src="../_images/image_ootFx-Ly8n.png" /></p>
+<p>现在我们可以看到界面上面有一个视频流、一个三维空间坐标系，以及一个相机位姿。</p>
+<p>在stereo2运行的状态下，视频流接收的是话题：<code class="docutils literal notranslate"><span class="pre">/viobot/stereo2/feature_img</span></code>，这个话题是一张叠加了梯度点的图片，连续起来也就是我们能够看到的一张带深度点的视频流。</p>
+<p>位姿接收的话题是：<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/odometry_rect</span></code>，做了一个相机框，能够更好的看的出相机的朝向。</p>
+<p>当有点云生成的时候，接收到的点云话有三个，分别对应点云的显示类型：<code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/points</span></code> <code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/points_rdf</span></code> <code class="docutils literal notranslate"><span class="pre">/viobot/pr_loop/tof_points</span></code></p>
+</section>
+<section id="ubuntu">
+<h2>2.ubuntu端<a class="headerlink" href="#ubuntu" title="Link to this heading"></a></h2>
+<p>ubuntu端我们现在还没有做上位机，因为有ROS这个很方便的工具在，所以我们可以直接使用ROS的RVIZ作为可视化工具。</p>
+<p>首先肯定是先配置ROS主从机了，配置方法已经在前面一篇viobot ROS配置里面讲的很详细了。</p>
+<p>然后打开RVIZ，再导入上面的.rviz文件即可。</p>
+<p><img alt="../_images/image_D8uUv-g3LP.png" src="../_images/image_D8uUv-g3LP.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, hession.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
