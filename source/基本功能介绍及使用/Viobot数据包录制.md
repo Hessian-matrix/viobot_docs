@@ -14,7 +14,7 @@ IP框输入IP，点击连接，连接成功后会直接显示视频流。
 
 ![](image/image_qEL7ULtYm2.png)
 
-## 2.录包
+### 2.录包
 
 ![](image/image_7h-kAeevkN.png)
 
