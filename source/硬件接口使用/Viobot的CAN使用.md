@@ -25,7 +25,7 @@ Viobot面有一个2\*4pin的接口母座，接头我们发货的时候会放在�
 ### 3.命令行测试
 
 ```bash
-sudo apt install can_utils
+sudo apt install can-utils
 ifconfig can0 down
 ip link set can0 type can bitrate 1000000
 ifconfig can0 up
